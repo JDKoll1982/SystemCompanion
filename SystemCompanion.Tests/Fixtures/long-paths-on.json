@@ -1,0 +1,151 @@
+{
+  "generatedLocal": "2026-10-17 13:40",
+  "computerName": "STUDIO",
+  "userName": "tester",
+  "identity": {
+    "manufacturer": "Micro-Star International Co., Ltd.",
+    "model": "MS-7E06",
+    "board": "PRO Z790-A WIFI",
+    "boardVersion": "1.0",
+    "biosVendor": "American Megatrends International, LLC.",
+    "biosVersion": "E7E06IMS.AK0",
+    "biosDate": "2024-01-10"
+  },
+  "cpu": {
+    "name": "Intel(R) Core(TM) i7-14700K",
+    "cores": 20,
+    "threads": 28,
+    "baseMhz": 3400,
+    "l3CacheMb": 33
+  },
+  "memory": {
+    "installedGb": 32,
+    "visibleGb": 31.8,
+    "moduleCount": 2,
+    "configuredMt": 4800,
+    "ratedMt": 6000,
+    "modules": [
+      {
+        "slot": "DIMM A2",
+        "sizeGb": 16,
+        "speedMt": 4800,
+        "part": "CMK32GX5M2B6000C36"
+      },
+      {
+        "slot": "DIMM B2",
+        "sizeGb": 16,
+        "speedMt": 4800,
+        "part": "CMK32GX5M2B6000C36"
+      }
+    ]
+  },
+  "graphics": {
+    "adapters": [
+      {
+        "name": "NVIDIA GeForce RTX 4070",
+        "isVirtual": false,
+        "vramGb": 12,
+        "driverVersion": "560.94",
+        "driverDate": "2026-08-15",
+        "currentWidth": 2560,
+        "currentHeight": 1440,
+        "refreshHz": 144
+      }
+    ],
+    "nvidia": [
+      {
+        "name": "NVIDIA GeForce RTX 4070",
+        "driver": "560.94",
+        "vramMb": 12282,
+        "usedMb": 1024,
+        "utilization": 3,
+        "temperature": 41
+      }
+    ]
+  },
+  "storage": {
+    "drives": [
+      {
+        "model": "Samsung SSD 990 PRO 2TB",
+        "sizeGb": 1863,
+        "interface": "NVMe",
+        "mediaType": "SSD"
+      }
+    ],
+    "volumes": [
+      {
+        "letter": "C:",
+        "label": "System",
+        "sizeGb": 1863,
+        "freeGb": 931.5,
+        "fileSystem": "NTFS"
+      }
+    ]
+  },
+  "windows": {
+    "edition": "Windows 11 Pro",
+    "version": "10.0.22631",
+    "build": "22631",
+    "displayVersion": "23H2",
+    "installDate": "2024-02-01",
+    "lastBootHours": 12.5,
+    "systemDrive": "C:",
+    "longPaths": true,
+    "pageFile": {
+      "automatic": true,
+      "files": [
+        {
+          "name": "C:\\pagefile.sys",
+          "allocatedMb": 8192
+        }
+      ]
+    },
+    "startupItems": [
+      {
+        "name": "OneDrive",
+        "command": "C:\\Users\\tester\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe /background",
+        "location": "HKCU\\Run"
+      }
+    ]
+  },
+  "performance": {
+    "powerPlan": "Ultimate Performance",
+    "gameMode": true,
+    "gameDvrEnabled": false,
+    "hardwareScheduling": true,
+    "hardwareSchedulingRaw": 2,
+    "memoryIntegrity": false,
+    "vbsConfigured": true,
+    "hypervisorLaunch": "Auto",
+    "defender": {
+      "realtimeDisabled": false,
+      "exclusionCount": 4,
+      "exclusions": [
+        "%USERPROFILE%\\.nuget",
+        "%USERPROFILE%\\.ollama\\models",
+        "C:\\src",
+        "%TEMP%"
+      ]
+    }
+  },
+  "tooling": {
+    "dotnet": "9.0.100",
+    "git": "2.47.0",
+    "node": "22.9.0",
+    "npm": "10.9.0",
+    "python": "3.12.7",
+    "pip": "24.2",
+    "docker": null,
+    "code": "1.94.0",
+    "ollama": "0.3.13",
+    "nvidia": "560.94"
+  },
+  "aiTools": {
+    "lmStudio": false,
+    "ollamaDataDir": true
+  },
+  "dotnetSdks": [
+    "9.0.100"
+  ],
+  "wslDistros": []
+}

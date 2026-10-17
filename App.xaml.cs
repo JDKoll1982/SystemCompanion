@@ -16,6 +16,7 @@ public partial class App : Application
         // Optional first argument picks the starting page, handy while developing:
         //   SystemCompanion.exe windows
         //   SystemCompanion.exe improve
+        //   SystemCompanion.exe history
         var argv = Environment.GetCommandLineArgs();
         var startPage = argv.Length > 1 ? argv[1] : "bios";
 

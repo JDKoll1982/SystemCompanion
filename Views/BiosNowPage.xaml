@@ -7,7 +7,8 @@
     xmlns:local="using:SystemCompanion.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="using:SystemCompanion.Models"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    SizeChanged="BiosPage_SizeChanged">
 
     <ScrollViewer x:Name="PageScroll" Padding="0,0,8,0" VerticalScrollBarVisibility="Auto">
         <StackPanel
@@ -27,54 +28,80 @@
                             Text="The motherboard keeps your settings in a small file. This is what that file says right now — no technical knowledge needed to read it." />
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Spacing="8">
-                        <Border
-                            Padding="12,6"
-                            Background="#1A3DDC97"
-                            BorderBrush="#553DDC97"
-                            BorderThickness="1"
-                            CornerRadius="14">
-                            <StackPanel Orientation="Horizontal" Spacing="7">
-                                <FontIcon
-                                    FontSize="12"
-                                    Foreground="{StaticResource MintBrush}"
-                                    Glyph="&#xE73E;" />
-                                <TextBlock
-                                    Style="{StaticResource PillText}"
-                                    Foreground="{StaticResource MintBrush}"
-                                    Text="{x:Bind ViewModel.ValidityText}" />
-                            </StackPanel>
-                        </Border>
-                        <Border
-                            Padding="12,6"
-                            Background="#14FFFFFF"
-                            BorderBrush="#22FFFFFF"
-                            BorderThickness="1"
-                            CornerRadius="14">
-                            <TextBlock Style="{StaticResource PillText}" Text="{x:Bind ViewModel.BiosVersion}" />
-                        </Border>
-                        <Border
-                            Padding="12,6"
-                            Background="#14FFFFFF"
-                            BorderBrush="#22FFFFFF"
-                            BorderThickness="1"
-                            CornerRadius="14">
-                            <TextBlock Style="{StaticResource PillText}" Text="{x:Bind ViewModel.Board}" />
-                        </Border>
-                        <Border
-                            Padding="12,6"
-                            Background="#14FFFFFF"
-                            BorderBrush="#22FFFFFF"
-                            BorderThickness="1"
-                            CornerRadius="14">
-                            <TextBlock Style="{StaticResource PillText}" Text="{x:Bind ViewModel.SavedLine}" />
-                        </Border>
-                    </StackPanel>
+                    <!--  Pills scroll sideways rather than clipping when the board name is long
+                          or the window is narrow.  -->
+                    <ScrollViewer
+                        HorizontalScrollBarVisibility="Auto"
+                        HorizontalScrollMode="Auto"
+                        VerticalScrollBarVisibility="Disabled"
+                        VerticalScrollMode="Disabled">
+                        <StackPanel
+                            x:Name="PillStack"
+                            Orientation="Horizontal"
+                            Spacing="8">
+                            <Border
+                                HorizontalAlignment="Left" Padding="12,6"
+                                Background="#1A3DDC97"
+                                BorderBrush="#553DDC97"
+                                BorderThickness="1"
+                                CornerRadius="14">
+                                <StackPanel Orientation="Horizontal" Spacing="7">
+                                    <FontIcon
+                                        FontSize="12"
+                                        Foreground="{StaticResource MintBrush}"
+                                        Glyph="&#xE73E;" />
+                                    <TextBlock
+                                        Style="{StaticResource PillText}"
+                                        Foreground="{StaticResource MintBrush}"
+                                        Text="{x:Bind ViewModel.ValidityText}" />
+                                </StackPanel>
+                            </Border>
+                            <Border
+                                HorizontalAlignment="Left" Padding="12,6"
+                                Background="#14FFFFFF"
+                                BorderBrush="#22FFFFFF"
+                                BorderThickness="1"
+                                CornerRadius="14">
+                                <TextBlock Style="{StaticResource PillText}" Text="{x:Bind ViewModel.BiosVersion}" />
+                            </Border>
+                            <Border
+                                HorizontalAlignment="Left" Padding="12,6"
+                                Background="#14FFFFFF"
+                                BorderBrush="#22FFFFFF"
+                                BorderThickness="1"
+                                CornerRadius="14">
+                                <TextBlock Style="{StaticResource PillText}" Text="{x:Bind ViewModel.Board}" />
+                            </Border>
+                            <Border
+                                HorizontalAlignment="Left" Padding="12,6"
+                                Background="#14FFFFFF"
+                                BorderBrush="#22FFFFFF"
+                                BorderThickness="1"
+                                CornerRadius="14">
+                                <TextBlock Style="{StaticResource PillText}" Text="{x:Bind ViewModel.SavedLine}" />
+                            </Border>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </Border>
+
+            <!--  Firmware mismatch: shown instead of confident wrong names  -->
+            <Border Style="{StaticResource Card}" Visibility="{x:Bind ViewModel.HasFirmwareWarning}">
+                <StackPanel Spacing="6">
+                    <TextBlock
+                        Style="{StaticResource EyebrowText}"
+                        Foreground="{StaticResource AmberBrush}"
+                        Text="FIRMWARE DOES NOT MATCH" />
+                    <TextBlock
+                        MaxWidth="820"
+                        Style="{StaticResource BodyText}"
+                        Text="{x:Bind ViewModel.FirmwareWarning}"
+                        TextWrapping="Wrap" />
                 </StackPanel>
             </Border>
 
             <!--  Headline tiles  -->
-            <ItemsRepeater ItemsSource="{x:Bind ViewModel.Headline}">
+            <ItemsRepeater ItemsSource="{x:Bind ViewModel.Headline}" Visibility="{x:Bind ViewModel.ShowsDecodedValues}">
                 <ItemsRepeater.Layout>
                     <UniformGridLayout
                         ItemsStretch="Fill"
@@ -118,7 +145,7 @@
             </ItemsRepeater>
 
             <!--  Detail sections  -->
-            <ItemsRepeater ItemsSource="{x:Bind ViewModel.Sections}">
+            <ItemsRepeater ItemsSource="{x:Bind ViewModel.Sections}" Visibility="{x:Bind ViewModel.ShowsDecodedValues}">
                 <ItemsRepeater.Layout>
                     <StackLayout Spacing="16" />
                 </ItemsRepeater.Layout>

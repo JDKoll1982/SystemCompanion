@@ -5,7 +5,7 @@
 #   .\tools\refresh-and-run.ps1 -SkipScan     just rebuild and launch
 [CmdletBinding()]
 param(
-    [ValidateSet('bios', 'windows', 'improve')]
+    [ValidateSet('bios', 'windows', 'improve', 'history')]
     [string]$Page = 'bios',
     [switch]$SkipScan
 )

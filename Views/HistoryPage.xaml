@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="SystemCompanion.Views.HistoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:SystemCompanion.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:services="using:SystemCompanion.Services"
+    xmlns:vm="using:SystemCompanion.ViewModels"
+    mc:Ignorable="d"
+    SizeChanged="HistoryPage_SizeChanged">
+
+    <ScrollViewer x:Name="PageScroll" Padding="0,0,8,0" VerticalScrollBarVisibility="Auto">
+        <StackPanel
+            MaxWidth="1180"
+            HorizontalAlignment="Stretch"
+            Spacing="18">
+
+            <!--  Hero: the one-line answer  -->
+            <Border Style="{StaticResource HeroCard}">
+                <StackPanel Spacing="10">
+                    <TextBlock Style="{StaticResource EyebrowText}" Text="KEPT READINGS" />
+                    <TextBlock Style="{StaticResource DisplayText}" Text="What changed since last time" />
+                    <TextBlock
+                        MaxWidth="820"
+                        Style="{StaticResource BodyText}"
+                        Text="{x:Bind ViewModel.SummaryLine, Mode=OneWay}" />
+                    <TextBlock
+                        MaxWidth="820"
+                        Style="{StaticResource CaptionText}"
+                        Text="{x:Bind ViewModel.SkippedNote, Mode=OneWay}"
+                        Visibility="{x:Bind ViewModel.HasSkippedNote, Mode=OneWay}"
+                        TextWrapping="Wrap" />
+                </StackPanel>
+            </Border>
+
+            <!--  The two pickers  -->
+            <Border Style="{StaticResource Card}">
+                <StackPanel Spacing="12">
+                    <TextBlock Style="{StaticResource H2Text}" Text="Pick two readings" />
+
+                    <!--  Side by side when there is room, stacked when there is not.
+                          Declared stacked so a narrow window never clips a picker.  -->
+                    <Grid ColumnSpacing="16" RowSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <ComboBox
+                            x:Name="LeftPicker"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            MinWidth="220"
+                            Header="Older reading"
+                            DisplayMemberPath="DisplayName"
+                            HorizontalAlignment="Stretch"
+                            ItemsSource="{x:Bind ViewModel.Entries, Mode=OneWay}"
+                            SelectionChanged="LeftPicker_SelectionChanged" />
+                        <ComboBox
+                            x:Name="RightPicker"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            MinWidth="220"
+                            Header="Newer reading"
+                            DisplayMemberPath="DisplayName"
+                            HorizontalAlignment="Stretch"
+                            ItemsSource="{x:Bind ViewModel.Entries, Mode=OneWay}"
+                            SelectionChanged="RightPicker_SelectionChanged" />
+                    </Grid>
+
+                    <TextBlock
+                        Style="{StaticResource CaptionText}"
+                        Text="{x:Bind ViewModel.CountLine, Mode=OneWay}" />
+                </StackPanel>
+            </Border>
+
+            <!--  What changed, one row per value, in a sentence  -->
+            <Border Style="{StaticResource Card}" Visibility="{x:Bind ViewModel.HasChanged, Mode=OneWay}">
+                <StackPanel Spacing="4">
+                    <TextBlock Style="{StaticResource H2Text}" Text="What changed" />
+                    <ItemsRepeater ItemsSource="{x:Bind ViewModel.Changed, Mode=OneWay}">
+                        <ItemsRepeater.Layout>
+                            <StackLayout Spacing="0" />
+                        </ItemsRepeater.Layout>
+                        <ItemsRepeater.ItemTemplate>
+                            <DataTemplate x:DataType="services:ComparisonRow">
+                                <Border BorderBrush="#1424303F" BorderThickness="0,0,0,1">
+                                    <StackPanel Padding="0,12,0,12" Spacing="2">
+                                        <TextBlock
+                                            Style="{StaticResource EyebrowText}"
+                                            Foreground="{StaticResource TextLoBrush}"
+                                            Text="{x:Bind Area}" />
+                                        <TextBlock
+                                            Style="{StaticResource BodyText}"
+                                            Text="{x:Bind Sentence}"
+                                            TextWrapping="Wrap" />
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsRepeater.ItemTemplate>
+                    </ItemsRepeater>
+                </StackPanel>
+            </Border>
+
+            <!--  What stayed the same  -->
+            <Border Style="{StaticResource Card}" Visibility="{x:Bind ViewModel.HasTwoReadings, Mode=OneWay}">
+                <StackPanel Spacing="4">
+                    <TextBlock Style="{StaticResource H2Text}" Text="What stayed the same" />
+                    <ItemsRepeater ItemsSource="{x:Bind ViewModel.Unchanged, Mode=OneWay}">
+                        <ItemsRepeater.Layout>
+                            <StackLayout Spacing="0" />
+                        </ItemsRepeater.Layout>
+                        <ItemsRepeater.ItemTemplate>
+                            <DataTemplate x:DataType="services:ComparisonRow">
+                                <Border BorderBrush="#1424303F" BorderThickness="0,0,0,1">
+                                    <Grid Padding="0,10,0,10" ColumnSpacing="12">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock
+                                            FontSize="13"
+                                            Foreground="{StaticResource TextMidBrush}"
+                                            Text="{x:Bind Label}"
+                                            TextWrapping="Wrap" />
+                                        <TextBlock
+                                            Grid.Column="1"
+                                            FontSize="13"
+                                            FontWeight="SemiBold"
+                                            Foreground="{StaticResource TextHiBrush}"
+                                            Text="{x:Bind After}"
+                                            TextAlignment="Right" />
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsRepeater.ItemTemplate>
+                    </ItemsRepeater>
+                </StackPanel>
+            </Border>
+
+            <!--  Every kept reading  -->
+            <Border Style="{StaticResource Card}">
+                <StackPanel Spacing="4">
+                    <TextBlock Style="{StaticResource H2Text}" Text="Every reading kept" />
+                    <ItemsRepeater ItemsSource="{x:Bind ViewModel.Timeline, Mode=OneWay}">
+                        <ItemsRepeater.Layout>
+                            <StackLayout Spacing="0" />
+                        </ItemsRepeater.Layout>
+                        <ItemsRepeater.ItemTemplate>
+                            <DataTemplate x:DataType="vm:TimelineItem">
+                                <Border BorderBrush="#1424303F" BorderThickness="0,0,0,1">
+                                    <Grid Padding="0,10,0,10" ColumnSpacing="12">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock
+                                            FontSize="13"
+                                            Foreground="{StaticResource TextHiBrush}"
+                                            Text="{x:Bind When}" />
+                                        <TextBlock
+                                            Grid.Column="1"
+                                            Style="{StaticResource CaptionText}"
+                                            Text="{x:Bind Summary}"
+                                            TextAlignment="Right" />
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsRepeater.ItemTemplate>
+                    </ItemsRepeater>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

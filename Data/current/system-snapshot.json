@@ -1,6 +1,6 @@
 ﻿{
-    "generatedAt":  "2026-10-17T13:30:06.2618696-05:00",
-    "generatedLocal":  "2026-10-17 13:30",
+    "generatedAt":  "2026-10-17T14:17:44.7364001-05:00",
+    "generatedLocal":  "2026-10-17 14:17",
     "computerName":  "JOHNSPC",
     "userName":  "johnk",
     "identity":  {
@@ -92,8 +92,8 @@
                                         "name":  "NVIDIA GeForce RTX 5070 Ti",
                                         "driver":  "617.42",
                                         "vramMb":  16303,
-                                        "usedMb":  1097,
-                                        "utilization":  3,
+                                        "usedMb":  1334,
+                                        "utilization":  2,
                                         "temperature":  35
                                     }
                                 ]
@@ -107,16 +107,16 @@
                                        "mediaType":  "Fixed hard disk media"
                                    },
                                    {
-                                       "model":  "General USB Flash Disk USB Device",
-                                       "sizeGb":  30,
-                                       "interface":  "USB",
-                                       "mediaType":  "Removable Media"
-                                   },
-                                   {
                                        "model":  "Samsung SSD 980 PRO 1TB",
                                        "sizeGb":  932,
                                        "interface":  "SCSI",
                                        "mediaType":  "Fixed hard disk media"
+                                   },
+                                   {
+                                       "model":  " USB  SanDisk 3.2Gen1 USB Device",
+                                       "sizeGb":  115,
+                                       "interface":  "USB",
+                                       "mediaType":  "Removable Media"
                                    }
                                ],
                     "volumes":  [
@@ -124,7 +124,7 @@
                                         "letter":  "C:",
                                         "label":  "",
                                         "sizeGb":  837,
-                                        "freeGb":  449,
+                                        "freeGb":  448,
                                         "fileSystem":  "NTFS"
                                     },
                                     {
@@ -143,7 +143,7 @@
                     "architecture":  "64-bit",
                     "displayVersion":  "26H2",
                     "installDate":  "2024-12-07",
-                    "lastBootHours":  0.9,
+                    "lastBootHours":  1.7,
                     "systemDrive":  "C:",
                     "longPaths":  true,
                     "pageFile":  {
@@ -242,7 +242,7 @@
                     "python":  "Python 3.10.11",
                     "pip":  "pip 26.1.2 from C:\\Users\\johnk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pip (python 3.10)",
                     "docker":  null,
-                    "code":  "1.141.0",
+                    "code":  "1.142.0",
                     "ollama":  null,
                     "nvidia":  "NVIDIA GeForce RTX 5070 Ti, 617.42, 16303 MiB"
                 },

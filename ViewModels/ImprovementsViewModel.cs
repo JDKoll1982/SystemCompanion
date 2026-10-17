@@ -13,7 +13,7 @@ public sealed class ImprovementsViewModel : ObservableBase
 
     public ImprovementsViewModel(SystemSnapshot system, BiosProfile bios)
     {
-        _all = new RecommendationEngine(system, bios).Build().ToList();
+        _all = new RecommendationEngine(system, bios, AppData.ReadBiosValues()).Build().ToList();
         Refresh();
 
         AlreadyGoodCount = _all.Count(s => s.State == SuggestionState.AlreadyGood);

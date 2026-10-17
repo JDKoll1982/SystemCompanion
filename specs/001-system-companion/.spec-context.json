@@ -1,10 +1,1210 @@
 {
-  "workflow": "speckit",
+  "workflow": "companion",
   "specName": "001-system-companion",
   "branch": "001-system-companion",
   "selectedAt": "2026-10-17T18:33:10.302Z",
-  "currentStep": "specify",
-  "status": "draft",
-  "history": [],
-  "telemetryInstanceId": "43c61ba1-84aa-46c0-92ce-b3dbedf251e6"
+  "currentStep": "implement",
+  "status": "completed",
+  "history": [
+    {
+      "step": "specify",
+      "substep": null,
+      "kind": "start",
+      "by": "extension",
+      "at": "2026-10-17T18:43:40.018Z"
+    },
+    {
+      "step": "specify",
+      "substep": null,
+      "kind": "complete",
+      "by": "extension",
+      "at": "2026-10-17T18:45:20.257Z"
+    },
+    {
+      "step": "plan",
+      "substep": null,
+      "kind": "start",
+      "by": "extension",
+      "at": "2026-10-17T18:45:31.064Z"
+    },
+    {
+      "step": "plan",
+      "substep": "research",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:49:57.808Z"
+    },
+    {
+      "step": "plan",
+      "substep": "design",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:51:39.576Z"
+    },
+    {
+      "step": "plan",
+      "substep": null,
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:51:42.944Z"
+    },
+    {
+      "step": "tasks",
+      "substep": null,
+      "kind": "start",
+      "by": "extension",
+      "at": "2026-10-17T18:51:47.638Z"
+    },
+    {
+      "step": "tasks",
+      "substep": "generate",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:53:02.657Z"
+    },
+    {
+      "step": "tasks",
+      "substep": null,
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:53:02.922Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "kind": "start",
+      "by": "extension",
+      "at": "2026-10-17T18:53:10.817Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T001",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:53:24.994Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T002",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:53:25.243Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T003",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:53:35.792Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T004",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:53:36.033Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T005",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:53:36.264Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T006",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:54:40.136Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T010",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:54:42.622Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T007",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:55:04.951Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T011",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:55:07.914Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T009",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T18:55:28.216Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T008",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:01:00.765Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T012",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:01:01.006Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T013",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:04:48.986Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T014",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:04:51.875Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T015",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:05:20.059Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T016",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:05:23.266Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T017",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:06:25.409Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T018",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:06:28.307Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T021",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:07:27.944Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T022",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:07:30.913Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T023",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:07:33.630Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T024",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:07:37.157Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T019",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:08:27.402Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T020",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:08:30.281Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T025",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:08:33.099Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T026",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:08:35.759Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T027",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:08:38.671Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T028",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:08:41.534Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T029",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:08:44.881Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T030",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:10:14.562Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T031",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:10:17.533Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T032",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:10:20.450Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T033",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:10:23.989Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T034",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:10:27.431Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T035",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:11:05.167Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T036",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:11:08.244Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T037",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:11:12.303Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T038",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:11:35.176Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T039",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:11:38.889Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T040",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:11:41.953Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T041",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:13:06.635Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T042",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:13:09.971Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T043",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:13:13.362Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T044",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:13:16.317Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "task": "T045",
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:13:19.294Z"
+    },
+    {
+      "step": "implement",
+      "substep": null,
+      "kind": "complete",
+      "by": "ai",
+      "at": "2026-10-17T19:13:19.429Z"
+    }
+  ],
+  "telemetryInstanceId": "43c61ba1-84aa-46c0-92ce-b3dbedf251e6",
+  "workingBranch": "main",
+  "unattended": true,
+  "last_action": "All 45 tasks done; build clean, 14 of 14 tests pass, app opens on all four routes",
+  "coverage": {
+    "FR-001": {
+      "title": "All displayed values come from stored reading files, never a network service",
+      "tasks": [
+        "T006",
+        "T012",
+        "T016"
+      ]
+    },
+    "FR-002": {
+      "title": "The app never writes to the OS, firmware, a device, or the original settings file",
+      "tasks": [
+        "T011",
+        "T017"
+      ]
+    },
+    "FR-003": {
+      "title": "Every visible value carries one plain-language sentence",
+      "tasks": [
+        "T021"
+      ]
+    },
+    "FR-004": {
+      "title": "Absent or unreadable values show Unknown rather than a substitute",
+      "tasks": [
+        "T021"
+      ]
+    },
+    "FR-005": {
+      "title": "BIOS screen shows board, firmware, save date, four headline facts and grouped detail with default markers",
+      "tasks": [
+        "T022"
+      ]
+    },
+    "FR-006": {
+      "title": "Windows screen shows four headline facts plus grouped detail incl. startup programs and developer tools",
+      "tasks": [
+        "T023"
+      ]
+    },
+    "FR-007": {
+      "title": "Advice screen shows summary counts for worth doing, optional, manual check and already correct",
+      "tasks": [
+        "T024"
+      ]
+    },
+    "FR-008": {
+      "title": "Advice screen offers Programming, Gaming, AI work and Everyday filters",
+      "tasks": [
+        "T024"
+      ]
+    },
+    "FR-009": {
+      "title": "Each advice card shows status, goal, title, summary, current, target, why, how, benefit, risk and restart",
+      "tasks": [
+        "T024"
+      ]
+    },
+    "FR-010": {
+      "title": "A suggestion serving several goals appears once and stays visible under each goal",
+      "tasks": [
+        "T024"
+      ]
+    },
+    "FR-011": {
+      "title": "Every completed scan is kept as a dated entry and the current reading stays in place",
+      "tasks": [
+        "T011",
+        "T033"
+      ]
+    },
+    "FR-012": {
+      "title": "History entries are ordered by reading content and unreadable entries are skipped with a note",
+      "tasks": [
+        "T014",
+        "T033"
+      ],
+      "tests": [
+        "SystemCompanion.Tests/HistoryServiceTests.cs::Entries_are_ordered_by_the_time_inside_the_file",
+        "An_unreadable_entry_is_skipped_with_a_plain_note"
+      ]
+    },
+    "FR-013": {
+      "title": "Comparison defaults to the two newest entries and either side can be swapped",
+      "tasks": [
+        "T025",
+        "T029"
+      ]
+    },
+    "FR-014": {
+      "title": "Each changed value is reported as a sentence with before, after and improvement or decline",
+      "tasks": [
+        "T009",
+        "T014",
+        "T025",
+        "T033"
+      ],
+      "tests": [
+        "SystemCompanion.Tests/HistoryServiceTests.cs::One_changed_value_is_reported_as_a_sentence"
+      ]
+    },
+    "FR-015": {
+      "title": "Unchanged values are reported as unchanged",
+      "tasks": [
+        "T025"
+      ],
+      "tests": [
+        "SystemCompanion.Tests/HistoryServiceTests.cs::One_changed_value_is_reported_as_a_sentence"
+      ]
+    },
+    "FR-016": {
+      "title": "With fewer than two entries the comparison explains a second reading is needed",
+      "tasks": [
+        "T025",
+        "T026"
+      ]
+    },
+    "FR-017": {
+      "title": "The shell states how many values changed since the previous reading",
+      "tasks": [
+        "T016",
+        "T018"
+      ]
+    },
+    "FR-018": {
+      "title": "The change statement leads to the comparison",
+      "tasks": [
+        "T018",
+        "T019"
+      ]
+    },
+    "FR-019": {
+      "title": "The comparison is a fourth screen selectable at startup by name",
+      "tasks": [
+        "T018",
+        "T019",
+        "T026",
+        "T027",
+        "T028"
+      ]
+    },
+    "FR-020": {
+      "title": "Advice is produced by a component exercisable without launching the UI",
+      "tasks": [
+        "T001",
+        "T006",
+        "T007",
+        "T008",
+        "T013"
+      ]
+    },
+    "FR-021": {
+      "title": "Automated tests cover Balanced power plan, long paths, four sticks at 6000, memory integrity and no GPU",
+      "tasks": [
+        "T030",
+        "T031",
+        "T032"
+      ],
+      "tests": [
+        "SystemCompanion.Tests/RecommendationEngineTests.cs::A_balanced_power_plan_is_worth_doing",
+        "Long_path_support_enabled_is_already_good",
+        "Four_sticks_running_at_6000_are_not_flagged",
+        "Memory_integrity_on_is_flagged_with_its_trade_off",
+        "A_reading_with_no_graphics_adapter_degrades_to_an_explanation"
+      ]
+    },
+    "FR-022": {
+      "title": "Every suggestion traces to a reading value and is withheld when that value is missing",
+      "tasks": [
+        "T021",
+        "T032"
+      ]
+    },
+    "FR-023": {
+      "title": "The advice component does not depend on the UI framework or runtime file locations",
+      "tasks": [
+        "T002",
+        "T013",
+        "T034"
+      ]
+    },
+    "FR-024": {
+      "title": "Every reading screen offers an explicit action to take a new reading",
+      "tasks": [
+        "T018",
+        "T035",
+        "T036"
+      ]
+    },
+    "FR-025": {
+      "title": "A new reading never starts without the person asking",
+      "tasks": [
+        "T017",
+        "T020",
+        "T037"
+      ]
+    },
+    "FR-026": {
+      "title": "The action shows progress, prevents concurrent readings and shows completion",
+      "tasks": [
+        "T020",
+        "T035",
+        "T036"
+      ]
+    },
+    "FR-027": {
+      "title": "A new reading replaces values and adds an entry, or on failure leaves everything untouched and says so",
+      "tasks": [
+        "T017",
+        "T020",
+        "T036",
+        "T037"
+      ]
+    },
+    "FR-028": {
+      "title": "The app compares the settings file firmware tag with the reference firmware tag",
+      "tasks": [
+        "T010",
+        "T038"
+      ],
+      "tests": [
+        "SystemCompanion.Tests/FirmwareReferenceTests.cs::A_matching_tag_passes",
+        "A_different_tag_fails",
+        "A_missing_tag_fails"
+      ]
+    },
+    "FR-029": {
+      "title": "On a tag mismatch or missing tag the app warns, naming both, and withholds reference-derived names",
+      "tasks": [
+        "T038",
+        "T039",
+        "T040"
+      ]
+    },
+    "FR-030": {
+      "title": "On a tag match the app shows no firmware warning",
+      "tasks": [
+        "T034",
+        "T038"
+      ]
+    }
+  },
+  "size": "oversized",
+  "classification": {
+    "projectedFiles": 21,
+    "projectedTasks": 28,
+    "scopeSignal": "larger",
+    "verdict": "oversized"
+  },
+  "expectations": [
+    "changing settings automatically",
+    "live sensor graphs",
+    "reading a BIOS other than E7E06IMS.AK0",
+    "accounts, cloud sync or notifications"
+  ],
+  "context": [
+    "area: Services/RecommendationEngine.cs (single Build() API, 25 suggestion ids, reads screenshot_check at runtime)",
+    "area: Models/SystemSnapshot.cs, BiosProfile.cs, Suggestion.cs (no WinUI dependencies)",
+    "area: Models/Display.cs (WinUI-dependent, stays in the app)",
+    "area: ViewModels/ShellViewModel.cs (loads both readings in its constructor)",
+    "area: MainWindow.xaml/.cs (NavigationView Tag switch) and App.xaml.cs (argv page selector)",
+    "area: tools/discover-system.ps1 (single -OutputPath parameter, no history writer yet)",
+    "area: ViewModels/ObservableBase.cs (Set<T> + Raise) and Styles/Theme.xaml (Card, HeroCard, ChipButton, H1/H2Text)",
+    "constraint: constitution v1.0.0 principles I-V honored, incl. read-only, plain language, evidence, tests, no new frameworks"
+  ],
+  "intent": "Give the existing read-only diagnostic app a history and comparison capability, a verifiable advice engine, on-demand refresh, and a firmware mismatch guard",
+  "decisions": [
+    {
+      "decision": "Extract models and RecommendationEngine into SystemCompanion.Core (net10.0) referenced by the app and a new SystemCompanion.Tests xUnit project",
+      "why": "Lets the advice engine be tested without WinUI or the Windows App SDK runtime, which the constitution requires",
+      "rejected": "Test project referencing the WinUI app project, which needs XAML compilation and an SDK bootstrap in the test host"
+    },
+    {
+      "decision": "Inject screenshot-check BIOS values into RecommendationEngine as a name-to-label dictionary",
+      "why": "Removes the engine's static AppData and file-layout coupling with a smaller change than an interface",
+      "rejected": "Injecting a service interface with one implementation, or moving AppData into the library"
+    },
+    {
+      "decision": "discover-system.ps1 writes the history copy itself, after the current snapshot",
+      "why": "One writer covers the refresh script, the in-app rescan and a manual scan, with no race",
+      "rejected": "Having the app copy the file, which leaves manual scans with no history and adds a second writer"
+    },
+    {
+      "decision": "On a same-minute collision append a counter suffix to the pinned file name",
+      "why": "Keeps every reading while preserving the pinned pattern for the normal case",
+      "rejected": "Overwriting the entry (loses data) or always adding seconds (changes the pinned pattern everywhere)"
+    },
+    {
+      "decision": "Order history entries by the timestamp inside each file, never by file name",
+      "why": "Clock changes and counter suffixes break name order while the recorded time stays honest",
+      "rejected": "Ordering by file name or by file write time"
+    },
+    {
+      "decision": "Drive the comparison from a declared table of compared values with a per-row direction",
+      "why": "Diffing arbitrary JSON reports bookkeeping and cannot tell an improvement from a decline",
+      "rejected": "Reflecting over the whole snapshot"
+    },
+    {
+      "decision": "Run the scan by starting powershell.exe with -NoProfile -ExecutionPolicy Bypass -File",
+      "why": "Reuses the verified script with no arguments, no profile interference and no console window",
+      "rejected": "Reimplementing collection in C#, which duplicates a verified script"
+    },
+    {
+      "decision": "Hold the supported firmware tag as FirmwareReference.SupportedTag in Core",
+      "why": "One testable constant that cannot drift from the value the spec pins",
+      "rejected": "Reading the tag from the reference data files at startup"
+    },
+    {
+      "decision": "AppData prefers the repository Data folder over the copy beside the exe",
+      "why": "The scan script writes Data/current and Data/history in the repository, so the app must read the same folder for a rescan to be visible",
+      "rejected": "Passing an output path to the script, which still leaves history in the repository folder"
+    },
+    {
+      "decision": "A value unknown on both sides counts as Same, not CannotTell",
+      "why": "Two readings that both fail to read a value have not changed, and treating them as changes floods the comparison",
+      "rejected": "Checking Unknown before equality, which reports the whole table as changed"
+    },
+    {
+      "decision": "ComparisonField carries an optional Rank so a rendered value can be ordered",
+      "why": "Direction alone says which way is better but not which of two values is further along, which the improved/declined sentence needs",
+      "rejected": "Parsing numbers inside HistoryService, which would duplicate the table's knowledge"
+    },
+    {
+      "decision": "discover-system.ps1 resolves its default output path in the script body, and the app passes -OutputPath explicitly",
+      "why": "Windows PowerShell 5.1 leaves $PSScriptRoot empty while it binds parameter defaults, so a bare -File run failed before doing anything",
+      "rejected": "Relying on the app to pass the path, which would leave a manual run broken"
+    }
+  ],
+  "step_summaries": {
+    "plan": {
+      "summary": "Plan for three projects: extract logic to Core, add an xUnit suite, and add history, comparison, rescan and a firmware guard",
+      "key_finding": "RecommendationEngine is UI-free but reaches AppData directly through BestValue, so the engine can only be tested once that data is injected"
+    },
+    "tasks": {
+      "summary": "45 tasks in 8 phases: setup 5, foundational 15, US1 4, US2 5, US3 5, US4 3, US5 3, polish 5"
+    },
+    "specify": {
+      "summary": "History, comparison, the rescan action, a testable advice engine, the firmware warning and the fourth screen all ship"
+    }
+  },
+  "approach": "Move the models and the advice engine into a new SystemCompanion.Core library with the screenshot-check data injected, then have one xUnit project exercise it. History is written by the existing scan script, ordered by the timestamp inside each file, and compared through a declared table of values that know which direction is better.",
+  "currentTask": null,
+  "task_summaries": {
+    "T001": {
+      "status": "DONE",
+      "did": "Created the Core library project targeting net10.0",
+      "files": [
+        "SystemCompanion.Core/SystemCompanion.Core.csproj"
+      ]
+    },
+    "T002": {
+      "status": "DONE",
+      "did": "Created the xUnit test project with fixtures copied to output",
+      "files": [
+        "SystemCompanion.Tests/SystemCompanion.Tests.csproj"
+      ]
+    },
+    "T003": {
+      "status": "DONE",
+      "did": "Added the Core project reference to the app",
+      "files": [
+        "SystemCompanion.csproj"
+      ]
+    },
+    "T004": {
+      "status": "DONE",
+      "did": "Added the Core project reference to the tests",
+      "files": [
+        "SystemCompanion.Tests/SystemCompanion.Tests.csproj"
+      ]
+    },
+    "T005": {
+      "status": "DONE",
+      "did": "Registered Core and Tests in the solution",
+      "files": [
+        "SystemCompanion.slnx"
+      ]
+    },
+    "T006": {
+      "status": "DONE",
+      "did": "Moved SystemSnapshot and every nested model into Core with the namespace and all property names unchanged; deleted the original copy",
+      "files": [
+        "SystemCompanion.Core/Models/SystemSnapshot.cs;Models/SystemSnapshot.cs"
+      ]
+    },
+    "T010": {
+      "status": "DONE",
+      "did": "Added FirmwareReference with SupportedTag E7E06IMS.AK0 and a case-sensitive Matches helper that rejects null, empty and whitespace",
+      "files": [
+        "SystemCompanion.Core/Services/FirmwareReference.cs"
+      ]
+    },
+    "T007": {
+      "status": "DONE",
+      "did": "Moved the BIOS profile model into Core unchanged and deleted the original",
+      "files": [
+        "SystemCompanion.Core/Models/BiosProfile.cs",
+        "Models/BiosProfile.cs"
+      ]
+    },
+    "T011": {
+      "status": "DONE",
+      "did": "Copied each written snapshot to Data/history/scan-YYYY-MM-DD-HHmm.json with a -N counter, warning on failure",
+      "files": [
+        "tools/discover-system.ps1"
+      ]
+    },
+    "T009": {
+      "status": "DONE",
+      "did": "Declared the 16-row compared-value table with key, area, label, direction and invariant-culture formatters",
+      "files": [
+        "SystemCompanion.Core/Services/ComparisonField.cs"
+      ]
+    },
+    "T008": {
+      "status": "DONE",
+      "did": "Moved Suggestion with both enums into Core and deleted the original",
+      "files": [
+        "SystemCompanion.Core/Models/Suggestion.cs"
+      ]
+    },
+    "T012": {
+      "status": "DONE",
+      "did": "Added ReadBiosValues building a case-insensitive name-to-label map from screenshot_check",
+      "files": [
+        "Services/AppData.cs"
+      ]
+    },
+    "T013": {
+      "status": "DONE",
+      "did": "Moved the engine into Core and injected the BIOS value dictionary",
+      "files": [
+        "SystemCompanion.Core/Services/RecommendationEngine.cs",
+        "Services/RecommendationEngine.cs"
+      ]
+    },
+    "T014": {
+      "status": "DONE",
+      "did": "Built the history service: read, order by recorded time, skip unreadable entries, compare through the table",
+      "files": [
+        "SystemCompanion.Core/Services/HistoryService.cs",
+        "SystemCompanion.Core/Services/ComparisonField.cs"
+      ]
+    },
+    "T015": {
+      "status": "DONE",
+      "did": "Passed the loaded BIOS value dictionary when the engine is built",
+      "files": [
+        "ViewModels/ImprovementsViewModel.cs"
+      ]
+    },
+    "T016": {
+      "status": "DONE",
+      "did": "Extracted Reload and exposed the history entries plus the change count with change notification",
+      "files": [
+        "ViewModels/ShellViewModel.cs"
+      ]
+    },
+    "T017": {
+      "status": "DONE",
+      "did": "Added ScanRunner: powershell -NoProfile -ExecutionPolicy Bypass -File, waits for exit, reports success or failure",
+      "files": [
+        "Services/ScanRunner.cs",
+        "Services/AppData.cs"
+      ]
+    },
+    "T018": {
+      "status": "DONE",
+      "did": "Added the fourth navigation item, the change-count line and the scan bar host to the window",
+      "files": [
+        "MainWindow.xaml"
+      ]
+    },
+    "T021": {
+      "status": "DONE",
+      "did": "Added the Display mapping: Unknown for anything unreadable, and every value carries its explanation sentence",
+      "files": [
+        "Models/Display.cs",
+        "ViewModels/WindowsNowViewModel.cs",
+        "ViewModels/BiosNowViewModel.cs"
+      ]
+    },
+    "T022": {
+      "status": "DONE",
+      "did": "Checked the BIOS screen against FR-005: board, firmware, save date, four headline facts, grouped detail and default marker all present",
+      "files": [
+        "Views/BiosNowPage.xaml",
+        "ViewModels/BiosNowViewModel.cs"
+      ]
+    },
+    "T023": {
+      "status": "DONE",
+      "did": "Checked the Windows screen against FR-006: four headline facts plus storage, speed settings, version, startup programs and developer tools",
+      "files": [
+        "Views/WindowsNowPage.xaml",
+        "ViewModels/WindowsNowViewModel.cs"
+      ]
+    },
+    "T024": {
+      "status": "DONE",
+      "did": "Checked the advice screen against FR-007 to FR-010: four counts, four filters, full cards, and one card per suggestion under every goal it serves",
+      "files": [
+        "Views/ImprovementsPage.xaml",
+        "ViewModels/ImprovementsViewModel.cs"
+      ]
+    },
+    "T019": {
+      "status": "DONE",
+      "did": "Routed history to the new page and kept the existing three routes",
+      "files": [
+        "MainWindow.xaml.cs"
+      ]
+    },
+    "T020": {
+      "status": "DONE",
+      "did": "Added the rescan command: one scan at a time, reload on success, keep the displayed values on failure",
+      "files": [
+        "ViewModels/ShellViewModel.cs"
+      ]
+    },
+    "T025": {
+      "status": "DONE",
+      "did": "Built the history view model: entry list, default newest pair, changed and unchanged rows, one-reading message",
+      "files": [
+        "ViewModels/HistoryViewModel.cs"
+      ]
+    },
+    "T026": {
+      "status": "DONE",
+      "did": "Built the history page: two pickers, summary line, change list and timeline using Card and H2Text",
+      "files": [
+        "Views/HistoryPage.xaml"
+      ]
+    },
+    "T027": {
+      "status": "DONE",
+      "did": "Accepted history as a startup page value and kept the existing three",
+      "files": [
+        "App.xaml.cs",
+        "MainWindow.xaml.cs"
+      ]
+    },
+    "T028": {
+      "status": "DONE",
+      "did": "Added history to the accepted page values in the refresh script",
+      "files": [
+        "tools/refresh-and-run.ps1"
+      ]
+    },
+    "T029": {
+      "status": "DONE",
+      "did": "Wired the page to the shell, rebuilt the view model on navigation and kept the selected pair",
+      "files": [
+        "Views/HistoryPage.xaml.cs"
+      ]
+    },
+    "T030": {
+      "status": "DONE",
+      "did": "Wrote the five written readings as complete snapshot fixtures, each differing in one value",
+      "files": [
+        "SystemCompanion.Tests/Fixtures/"
+      ]
+    },
+    "T031": {
+      "status": "DONE",
+      "did": "Added the fixture loader, the BIOS value dictionary builder and the advice helper",
+      "files": [
+        "SystemCompanion.Tests/TestSupport.cs"
+      ]
+    },
+    "T032": {
+      "status": "DONE",
+      "did": "Asserted the five named advice cases; the suite passes offline",
+      "files": [
+        "SystemCompanion.Tests/RecommendationEngineTests.cs",
+        "SystemCompanion.Core/Services/RecommendationEngine.cs"
+      ]
+    },
+    "T033": {
+      "status": "DONE",
+      "did": "Asserted ordering by recorded time, the same-minute counter, the skipped entry and the one-changed-value sentence",
+      "files": [
+        "SystemCompanion.Tests/HistoryServiceTests.cs",
+        "SystemCompanion.Core/Services/HistoryService.cs"
+      ]
+    },
+    "T034": {
+      "status": "DONE",
+      "did": "Asserted a matching tag passes, a different tag fails and a missing tag fails",
+      "files": [
+        "SystemCompanion.Tests/FirmwareReferenceTests.cs"
+      ]
+    },
+    "T035": {
+      "status": "DONE",
+      "did": "Built the rescan bar: one button, progress ring while running, unavailable while a scan is in flight",
+      "files": [
+        "Views/Controls/RescanBar.xaml"
+      ]
+    },
+    "T036": {
+      "status": "DONE",
+      "did": "Bound the bar to the shell from the window host and show the failure sentence in place of a wrong value",
+      "files": [
+        "Views/Controls/RescanBar.xaml.cs",
+        "MainWindow.xaml.cs",
+        "MainWindow.xaml"
+      ]
+    },
+    "T037": {
+      "status": "DONE",
+      "did": "Verified by inspection: RescanAsync is only reached from the button click, and on failure Reload is skipped so the displayed values and history stay as they were",
+      "files": [
+        "ViewModels/ShellViewModel.cs",
+        "Services/ScanRunner.cs"
+      ]
+    },
+    "T038": {
+      "status": "DONE",
+      "did": "Exposed the firmware warning and hid reference-derived names when the tag differs or is missing, naming both values",
+      "files": [
+        "ViewModels/BiosNowViewModel.cs"
+      ]
+    },
+    "T039": {
+      "status": "DONE",
+      "did": "Showed the warning above the headline facts in the existing card style",
+      "files": [
+        "Views/BiosNowPage.xaml"
+      ]
+    },
+    "T040": {
+      "status": "DONE",
+      "did": "Confirmed the page passes the loaded profile to the view model, so the warning is computed on every navigation",
+      "files": [
+        "Views/BiosNowPage.xaml.cs"
+      ]
+    },
+    "T041": {
+      "status": "DONE",
+      "did": "Built the solution: 0 warnings, 0 errors",
+      "files": [
+        "SystemCompanion.slnx"
+      ]
+    },
+    "T042": {
+      "status": "DONE",
+      "did": "Ran the suite from the solution: 14 of 14 pass",
+      "files": [
+        "SystemCompanion.Tests/SystemCompanion.Tests.csproj"
+      ]
+    },
+    "T043": {
+      "status": "DONE",
+      "did": "Walked the runnable quickstart checks: solution builds clean, 14 tests pass, the two real history entries parse and are equal so no change line shows, and the app opens on both bios and history without crashing",
+      "files": [
+        "specs/001-system-companion/quickstart.md"
+      ]
+    },
+    "T044": {
+      "status": "DONE",
+      "did": "Updated the screen table, the data-file table and the folder map for the fourth screen, the history folder and the two new projects",
+      "files": [
+        "docs/README.md",
+        "PROMPT-NEXT-STEPS.md"
+      ]
+    },
+    "T045": {
+      "status": "DONE",
+      "did": "Removed the temporary Sync Impact Report comment from the ratified constitution",
+      "files": [
+        ".specify/memory/constitution.md"
+      ]
+    }
+  },
+  "concerns": [
+    {
+      "note": "The four screens were checked at runtime by launching the app on bios and history and confirming it stayed up; the visual walk described in quickstart.md still needs a person at the screen.",
+      "step": "implement"
+    }
+  ],
+  "verified": [
+    {
+      "what": "solution build",
+      "command": "dotnet build SystemCompanion.slnx -c Debug -v q --nologo",
+      "source": "derived",
+      "exitCode": 0,
+      "durationSeconds": 1.6,
+      "result": "    0 Warning(s) ·     0 Error(s) · Time Elapsed 00:00:01.47"
+    },
+    {
+      "what": "advice and history suite",
+      "command": "dotnet test SystemCompanion.Tests/SystemCompanion.Tests.csproj --nologo -v q",
+      "source": "derived",
+      "exitCode": 0,
+      "durationSeconds": 1.3,
+      "result": "Test run for C:\\Users\\johnk\\source\\repos\\SystemCompanion\\SystemCompanion.Tests\\bin\\Debug\\net10.0\\SystemCompanion.Tests.dll (.NETCoreApp,Version=v10.0) · A total of 1 test files matched the specified pattern. · Passed!  - Failed:     0, Passed:    14, Skipped:     0, Total:    14, Duration: 56 ms - SystemCompanion.Tests.dll (net10.0)"
+    },
+    {
+      "what": "App starts and stays up on the bios and history routes",
+      "command": "started SystemCompanion.exe with each page argument, waited 7-8 seconds, confirmed the process was still running, then stopped it",
+      "result": "both launches stayed up; no XAML or binding crash on the new fourth screen or on the BIOS warning card",
+      "warnings": []
+    },
+    {
+      "what": "The two kept readings under Data/history parse and carry the same recorded time and values",
+      "command": "read both scan-*.json files and the current snapshot, printing generatedLocal, board, memory speed and power plan",
+      "result": "both entries read 2026-10-17 13:54 with identical values, so the shell correctly shows no change statement",
+      "warnings": []
+    },
+    {
+      "what": "solution build (final)",
+      "command": "dotnet build SystemCompanion.slnx -c Debug -v q --nologo",
+      "source": "derived",
+      "exitCode": 0,
+      "durationSeconds": 1.7,
+      "result": "    0 Warning(s) ·     0 Error(s) · Time Elapsed 00:00:01.50"
+    },
+    {
+      "what": "advice and history suite (final)",
+      "command": "dotnet test SystemCompanion.Tests/SystemCompanion.Tests.csproj --nologo -v q",
+      "source": "derived",
+      "exitCode": 0,
+      "durationSeconds": 1.3,
+      "result": "Test run for C:\\Users\\johnk\\source\\repos\\SystemCompanion\\SystemCompanion.Tests\\bin\\Debug\\net10.0\\SystemCompanion.Tests.dll (.NETCoreApp,Version=v10.0) · A total of 1 test files matched the specified pattern. · Passed!  - Failed:     0, Passed:    14, Skipped:     0, Total:    14, Duration: 56 ms - SystemCompanion.Tests.dll (net10.0)"
+    },
+    {
+      "what": "scan writes one history entry",
+      "command": "C:\\Users\\johnk\\source\\repos\\SystemCompanion\\tools\\discover-system.ps1",
+      "source": "derived",
+      "exitCode": 0,
+      "durationSeconds": 14.5,
+      "result": "no output"
+    },
+    {
+      "what": "scan writes one history entry (powershell -File)",
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\johnk\\source\\repos\\SystemCompanion\\tools\\discover-system.ps1\"",
+      "source": "derived",
+      "exitCode": 0,
+      "durationSeconds": 3.4,
+      "result": "GPU Virtual Desktop Monitor · Windows Microsoft Windows 11 Home build 26300 · Power plan Ultimate Performance"
+    },
+    {
+      "what": "solution build (post-refactor)",
+      "command": "dotnet build SystemCompanion.slnx -c Debug -v q --nologo",
+      "source": "derived",
+      "exitCode": 0,
+      "durationSeconds": 1.8,
+      "result": "    0 Warning(s) ·     0 Error(s) · Time Elapsed 00:00:01.59"
+    },
+    {
+      "what": "advice and history suite (post-refactor)",
+      "command": "dotnet test SystemCompanion.Tests/SystemCompanion.Tests.csproj --nologo -v q",
+      "source": "derived",
+      "exitCode": 0,
+      "durationSeconds": 1.4,
+      "result": "Test run for C:\\Users\\johnk\\source\\repos\\SystemCompanion\\SystemCompanion.Tests\\bin\\Debug\\net10.0\\SystemCompanion.Tests.dll (.NETCoreApp,Version=v10.0) · A total of 1 test files matched the specified pattern. · Passed!  - Failed:     0, Passed:    14, Skipped:     0, Total:    14, Duration: 58 ms - SystemCompanion.Tests.dll (net10.0)"
+    }
+  ]
 }

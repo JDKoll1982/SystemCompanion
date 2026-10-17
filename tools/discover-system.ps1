@@ -15,8 +15,13 @@
 #>
 [CmdletBinding()]
 param(
-    [string]$OutputPath = (Join-Path $PSScriptRoot '..\Data\current\system-snapshot.json')
+    [string]$OutputPath
 )
+
+# Resolved in the body: Windows PowerShell 5.1 leaves $PSScriptRoot empty while it
+# binds parameter defaults, so a default here would fail on a bare -File invocation.
+$root = Split-Path -Parent $PSScriptRoot
+if (-not $OutputPath) { $OutputPath = Join-Path $root 'Data\current\system-snapshot.json' }
 
 $ErrorActionPreference = 'SilentlyContinue'
 $ProgressPreference = 'SilentlyContinue'
@@ -280,6 +285,43 @@ $snapshot = [ordered]@{
 $directory = Split-Path -Parent $OutputPath
 if (-not (Test-Path $directory)) { New-Item -ItemType Directory -Path $directory -Force | Out-Null }
 $snapshot | ConvertTo-Json -Depth 8 | Set-Content -Path $OutputPath -Encoding UTF8
+
+# Keep a dated copy of every reading so past ones can be compared later.
+$historyDir = Join-Path $root 'Data\history'
+try {
+    $generatedLocal = $null
+    try {
+        $generatedLocal = (Get-Content -Path $OutputPath -Raw -ErrorAction Stop | ConvertFrom-Json).generatedLocal
+    } catch { }
+
+    $stamp = Get-Date
+    if ($generatedLocal) {
+        $parsed = [datetime]::MinValue
+        $parsedOk = [datetime]::TryParseExact(
+            [string]$generatedLocal,
+            'yyyy-MM-dd HH:mm',
+            [System.Globalization.CultureInfo]::InvariantCulture,
+            [System.Globalization.DateTimeStyles]::None,
+            [ref]$parsed)
+        if ($parsedOk) { $stamp = $parsed }
+    }
+
+    if (-not (Test-Path -Path $historyDir)) {
+        New-Item -ItemType Directory -Path $historyDir -Force -ErrorAction Stop | Out-Null
+    }
+
+    $baseName = 'scan-' + $stamp.ToString('yyyy-MM-dd-HHmm')
+    $historyPath = Join-Path $historyDir ($baseName + '.json')
+    $counter = 2
+    while (Test-Path -Path $historyPath) {
+        $historyPath = Join-Path $historyDir ($baseName + '-' + $counter + '.json')
+        $counter++
+    }
+    Copy-Item -Path $OutputPath -Destination $historyPath -ErrorAction Stop
+    Write-Output "History $historyPath"
+} catch {
+    Write-Warning ("Could not keep a history copy of {0}: {1}" -f $OutputPath, $_.Exception.Message)
+}
 
 Write-Output "Wrote $OutputPath"
 Write-Output ("CPU {0} | {1} cores / {2} threads" -f $snapshot.cpu.name, $snapshot.cpu.cores, $snapshot.cpu.threads)

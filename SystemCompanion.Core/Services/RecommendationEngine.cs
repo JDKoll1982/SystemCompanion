@@ -13,11 +13,16 @@ public sealed class RecommendationEngine
 {
     private readonly SystemSnapshot _system;
     private readonly BiosProfile _bios;
+    private readonly IReadOnlyDictionary<string, string> _biosValues;
 
-    public RecommendationEngine(SystemSnapshot system, BiosProfile bios)
+    public RecommendationEngine(
+        SystemSnapshot system,
+        BiosProfile bios,
+        IReadOnlyDictionary<string, string> biosValues)
     {
         _system = system;
         _bios = bios;
+        _biosValues = biosValues;
     }
 
     public IReadOnlyList<Suggestion> Build()
@@ -292,7 +297,8 @@ public sealed class RecommendationEngine
             Why = "Memory integrity (also called HVCI) keeps the operating system's core safe from malicious "
                   + "drivers. The trade-off is real: it adds work to every memory operation, which shows up "
                   + "most in games, virtual machines and AI inference. Keep it on if you install software from "
-                  + "untrusted sources; turn it off if you want the last few percent and trust your software.",
+                  + "untrusted sources; turn it off if you want the last few percent and trust your software. "
+                  + "Turning it off lowers protection, so this is a trade and not a free win.",
             HowTo = "Windows Security > Device security > Core isolation details > Memory integrity. "
                     + "Turning it off requires a restart.",
             Goal = Goal.Gaming,
@@ -591,26 +597,7 @@ public sealed class RecommendationEngine
     }
 
     private string BestValue(string fieldName)
-    {
-        var screenshotCheck = AppData.ReadJson<System.Text.Json.JsonElement>(
-            "bios", "screenshot_check.json");
-        if (screenshotCheck.ValueKind == System.Text.Json.JsonValueKind.Object
-            && screenshotCheck.TryGetProperty("rows", out var rows))
-        {
-            foreach (var row in rows.EnumerateArray())
-            {
-                if (row.TryGetProperty("name", out var name)
-                    && string.Equals(name.GetString(), fieldName, StringComparison.OrdinalIgnoreCase)
-                    && row.TryGetProperty("label", out var labelTag)
-                    && labelTag.ValueKind == System.Text.Json.JsonValueKind.String)
-                {
-                    return labelTag.GetString() ?? "";
-                }
-            }
-        }
-
-        return "";
-    }
+        => _biosValues.TryGetValue(fieldName, out var label) ? label : "";
 
     private double FreeSpacePercent(string driveLetter)
     {

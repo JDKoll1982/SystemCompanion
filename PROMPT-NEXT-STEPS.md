@@ -8,11 +8,12 @@
 ## What this project is
 
 A WinUI 3 desktop app at `C:\Users\johnk\source\repos\SystemCompanion` that explains
-a Windows PC in plain language. Three screens:
+a Windows PC in plain language. Four screens:
 
 1. **BIOS — right now** — the saved motherboard settings, translated out of firmware jargon.
 2. **Windows — right now** — hardware and the Windows switches that affect speed.
 3. **What could be better** — advice for programming, gaming and AI work.
+4. **What changed** — any two kept readings compared, one sentence per changed value.
 
 **Audience rule (non-negotiable):** someone who has never opened a BIOS screen must
 be able to read every screen and understand what to do. Plain words, no unexplained
@@ -30,7 +31,7 @@ The app builds and runs. All three pages were launched and visually checked on
 ```powershell
 cd C:\Users\johnk\source\repos\SystemCompanion
 dotnet build SystemCompanion.csproj -c Debug
-.\bin\Debug\net10.0-windows10.0.19041.0\SystemCompanion.exe [bios|windows|improve]
+.\bin\Debug\net10.0-windows10.0.19041.0\SystemCompanion.exe [bios|windows|improve|history]
 ```
 
 The optional first argument picks the starting page (used for development).
@@ -43,20 +44,31 @@ package (there is a tiny `ObservableBase`), no third-party UI libraries.
 
 ```
 App.xaml / App.xaml.cs          application entry, merges Styles/Theme.xaml
-MainWindow.xaml / .cs           title bar, NavigationView, Frame, page routing
-Views/                          BiosNowPage, WindowsNowPage, ImprovementsPage
-ViewModels/                     ShellViewModel + one per page + ObservableBase
-Models/                         SystemSnapshot, BiosProfile, Suggestion, Display
-Services/                       AppData (paths + JSON), RecommendationEngine
+MainWindow.xaml / .cs           title bar, NavigationView, Frame, page routing,
+                                the change-count line and the rescan-bar host
+Views/                          BiosNowPage, WindowsNowPage, ImprovementsPage,
+                                HistoryPage
+Views/Controls/                 RescanBar: one scan at a time, progress, failure text
+ViewModels/                     ShellViewModel + one per page + HistoryViewModel
+                                + ObservableBase
+Models/                         Display (the display types and the Unknown rule)
+Services/                       AppData (paths + JSON), ScanRunner (runs the script)
 Styles/Theme.xaml, Palette.cs   colours, typography, card and chip styles
 Data/current/                   system-snapshot.json  (runtime input)
+Data/history/                   scan-YYYY-MM-DD-HHmm.json, one per reading
 Data/bios/                      bios-profile.json     (runtime input)
                                 screenshot_check.json (runtime input)
                                 MsOcFile.ocb, decoded report, reference/, screenshots/
 Data/bios/tools/                ocb_decrypt.py, build_bios_reference.py, verify_against_screenshots.py
 tools/                          discover-system.ps1, build-bios-summary.py, refresh-and-run.ps1
 docs/                           README.md, What-I-found.md, How-to-refresh.md
-specs/001-system-companion/     plain-language requirements
+specs/001-system-companion/     requirements, plan, design and task list
+
+SystemCompanion.Core/           class library, no UI dependency
+  Models/                       SystemSnapshot, BiosProfile, Suggestion
+  Services/                     RecommendationEngine, HistoryService,
+                                ComparisonField, FirmwareReference
+SystemCompanion.Tests/          xUnit suite, written readings under Fixtures/
 ```
 
 Only `Data/current/system-snapshot.json`, `Data/bios/bios-profile.json` and
@@ -75,9 +87,10 @@ Keys: `file{}`, `headline[]{label,value,plain,state}`, `sections[]{title,subtitl
 icon,items[]{name,value,plain,state,changed}}`. `state` is `good|warn|neutral`.
 C# mirror is `Models/BiosProfile.cs`.
 
-`Data/bios/screenshot_check.json` — rows of `{name, ui, status, label, stored}`,
-used by `RecommendationEngine.BestValue()` to read BIOS values such as
-`Re-Size Bar Support`. Do not rename those `name` values without updating the engine.
+`Data/bios/screenshot_check.json` — rows of `{name, ui, status, label, stored}`.
+`Services/AppData.ReadBiosValues()` turns them into a name-to-label dictionary that
+`RecommendationEngine` takes as a constructor argument (it no longer reads files).
+Do not rename those `name` values without updating the engine.
 
 ---
 

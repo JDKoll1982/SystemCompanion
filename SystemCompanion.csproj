@@ -63,6 +63,21 @@
         <Manifest Include="$(ApplicationManifest)" />
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="SystemCompanion.Core\SystemCompanion.Core.csproj" />
+    </ItemGroup>
+
+    <!-- The SDK globs every .cs below this project, which would pull in the sibling
+         Core and Tests projects a second time. They build on their own. -->
+    <ItemGroup>
+        <Compile Remove="SystemCompanion.Core\**" />
+        <Compile Remove="SystemCompanion.Tests\**" />
+        <None Remove="SystemCompanion.Core\**" />
+        <None Remove="SystemCompanion.Tests\**" />
+        <Content Remove="SystemCompanion.Core\**" />
+        <Content Remove="SystemCompanion.Tests\**" />
+    </ItemGroup>
+
     <!-- 
         Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
         Tools extension to be activated for this project even if the Windows App SDK Nuget

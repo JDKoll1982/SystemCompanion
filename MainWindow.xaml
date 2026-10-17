@@ -84,6 +84,11 @@
                         <FontIcon Glyph="&#xE945;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                <NavigationViewItem Content="What changed" Tag="history">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE81C;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
 
             <NavigationView.PaneFooter>
@@ -105,33 +110,77 @@
 
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="48" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <!--  Drag region doubles as a slim status strip.  -->
+                <!--  Drag region doubles as a slim status strip. The actions sit outside it
+                      so the drag region never swallows their clicks.  -->
                 <Grid
-                    x:Name="TitleBarDragRegion"
                     Grid.Row="0"
-                    Background="Transparent">
+                    MinHeight="48"
+                    ColumnSpacing="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid
+                        x:Name="TitleBarDragRegion"
+                        Grid.Column="0"
+                        Background="Transparent">
+                        <!--  A star column for the subtitle lets it trim with an ellipsis
+                              instead of being cut off by the drag region's edge.  -->
+                        <Grid
+                            Margin="28,0,0,0"
+                            VerticalAlignment="Center"
+                            ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border
+                                Grid.Column="0"
+                                Width="8"
+                                Height="8"
+                                Background="{StaticResource AccentGradient}"
+                                CornerRadius="4" />
+                            <TextBlock
+                                x:Name="HeaderTitle"
+                                Grid.Column="1"
+                                Style="{StaticResource CaptionText}"
+                                Text="BIOS — right now" />
+                            <TextBlock
+                                Grid.Column="2"
+                                Style="{StaticResource CaptionText}"
+                                Text="·" />
+                            <TextBlock
+                                x:Name="HeaderSubtitle"
+                                Grid.Column="3"
+                                Style="{StaticResource CaptionText}"
+                                TextTrimming="CharacterEllipsis"
+                                TextWrapping="NoWrap" />
+                        </Grid>
+                    </Grid>
+
                     <StackPanel
-                        Margin="28,0,0,0"
+                        Grid.Column="1"
+                        Margin="0,0,28,0"
                         VerticalAlignment="Center"
                         Orientation="Horizontal"
-                        Spacing="10">
-                        <Border
-                            Width="8"
-                            Height="8"
-                            Background="{StaticResource AccentGradient}"
-                            CornerRadius="4" />
-                        <TextBlock
-                            x:Name="HeaderTitle"
-                            Style="{StaticResource CaptionText}"
-                            Text="BIOS — right now" />
-                        <TextBlock Style="{StaticResource CaptionText}" Text="·" />
-                        <TextBlock
-                            x:Name="HeaderSubtitle"
-                            Style="{StaticResource CaptionText}" />
+                        Spacing="12">
+                        <!--  Shown only when the two newest readings differ.  -->
+                        <HyperlinkButton
+                            x:Name="ChangesLink"
+                            Padding="4,2"
+                            Click="Changes_Click"
+                            FontSize="12"
+                            Foreground="{StaticResource CyanBrush}"
+                            Visibility="Collapsed" />
+                        <!--  The rescan bar lives here so it is reachable from every screen.  -->
+                        <ContentControl x:Name="ScanBarHost" VerticalAlignment="Center" />
                     </StackPanel>
                 </Grid>
 

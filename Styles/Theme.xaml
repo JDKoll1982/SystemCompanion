@@ -62,6 +62,7 @@
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="Foreground" Value="{StaticResource TextHiBrush}" />
         <Setter Property="TextLineBounds" Value="Tight" />
+        <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="IsTextSelectionEnabled" Value="True" />
     </Style>
 

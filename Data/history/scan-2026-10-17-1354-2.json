@@ -1,0 +1,266 @@
+﻿{
+    "generatedAt":  "2026-10-17T13:54:48.6895248-05:00",
+    "generatedLocal":  "2026-10-17 13:54",
+    "computerName":  "JOHNSPC",
+    "userName":  "johnk",
+    "identity":  {
+                     "manufacturer":  "Micro-Star International Co., Ltd.",
+                     "model":  "MS-7E06",
+                     "board":  "PRO Z790-P WIFI (MS-7E06)",
+                     "boardVersion":  "2.0",
+                     "boardSerial":  "07E0622_NB1E008168",
+                     "biosVendor":  "American Megatrends International, LLC.",
+                     "biosVersion":  "A.K0",
+                     "biosDate":  "2026-08-18"
+                 },
+    "cpu":  {
+                "name":  "Intel(R) Core(TM) i9-14900K",
+                "cores":  24,
+                "threads":  32,
+                "baseMhz":  3200,
+                "socket":  "U3E1",
+                "l3CacheMb":  36
+            },
+    "memory":  {
+                   "installedGb":  64,
+                   "visibleGb":  63.7,
+                   "moduleCount":  4,
+                   "configuredMt":  6000,
+                   "ratedMt":  6000,
+                   "modules":  [
+                                   {
+                                       "slot":  "Controller0-DIMMA1",
+                                       "sizeGb":  16,
+                                       "speedMt":  6000,
+                                       "part":  "CMH32GX5M2B6000Z30"
+                                   },
+                                   {
+                                       "slot":  "Controller0-DIMMA2",
+                                       "sizeGb":  16,
+                                       "speedMt":  6000,
+                                       "part":  "CMH32GX5M2B6000Z30"
+                                   },
+                                   {
+                                       "slot":  "Controller1-DIMMB1",
+                                       "sizeGb":  16,
+                                       "speedMt":  6000,
+                                       "part":  "CMH32GX5M2B6000Z30"
+                                   },
+                                   {
+                                       "slot":  "Controller1-DIMMB2",
+                                       "sizeGb":  16,
+                                       "speedMt":  6000,
+                                       "part":  "CMH32GX5M2B6000Z30"
+                                   }
+                               ]
+               },
+    "graphics":  {
+                     "adapters":  [
+                                      {
+                                          "name":  "Virtual Desktop Monitor",
+                                          "isVirtual":  true,
+                                          "vramGb":  null,
+                                          "driverVersion":  "13.50.53.699",
+                                          "driverDate":  "2024-05-20",
+                                          "currentWidth":  null,
+                                          "currentHeight":  null,
+                                          "refreshHz":  null
+                                      },
+                                      {
+                                          "name":  "NVIDIA GeForce RTX 5070 Ti",
+                                          "isVirtual":  false,
+                                          "vramGb":  15.9,
+                                          "driverVersion":  "32.0.16.1742",
+                                          "driverDate":  "2026-09-29",
+                                          "currentWidth":  3440,
+                                          "currentHeight":  1440,
+                                          "refreshHz":  240
+                                      },
+                                      {
+                                          "name":  "Intel(R) UHD Graphics 770",
+                                          "isVirtual":  false,
+                                          "vramGb":  2,
+                                          "driverVersion":  "32.0.101.7088",
+                                          "driverDate":  "2026-06-16",
+                                          "currentWidth":  null,
+                                          "currentHeight":  null,
+                                          "refreshHz":  null
+                                      }
+                                  ],
+                     "nvidia":  [
+                                    {
+                                        "name":  "NVIDIA GeForce RTX 5070 Ti",
+                                        "driver":  "617.42",
+                                        "vramMb":  16303,
+                                        "usedMb":  1069,
+                                        "utilization":  14,
+                                        "temperature":  35
+                                    }
+                                ]
+                 },
+    "storage":  {
+                    "drives":  [
+                                   {
+                                       "model":  "Samsung SSD 990 PRO 2TB",
+                                       "sizeGb":  1863,
+                                       "interface":  "SCSI",
+                                       "mediaType":  "Fixed hard disk media"
+                                   },
+                                   {
+                                       "model":  "General USB Flash Disk USB Device",
+                                       "sizeGb":  30,
+                                       "interface":  "USB",
+                                       "mediaType":  "Removable Media"
+                                   },
+                                   {
+                                       "model":  "Samsung SSD 980 PRO 1TB",
+                                       "sizeGb":  932,
+                                       "interface":  "SCSI",
+                                       "mediaType":  "Fixed hard disk media"
+                                   }
+                               ],
+                    "volumes":  [
+                                    {
+                                        "letter":  "C:",
+                                        "label":  "",
+                                        "sizeGb":  837,
+                                        "freeGb":  449,
+                                        "fileSystem":  "NTFS"
+                                    },
+                                    {
+                                        "letter":  "D:",
+                                        "label":  "Game Drive",
+                                        "sizeGb":  1677,
+                                        "freeGb":  370,
+                                        "fileSystem":  "NTFS"
+                                    }
+                                ]
+                },
+    "windows":  {
+                    "edition":  "Microsoft Windows 11 Home",
+                    "version":  "10.0.26300",
+                    "build":  "26300",
+                    "architecture":  "64-bit",
+                    "displayVersion":  "26H2",
+                    "installDate":  "2024-12-07",
+                    "lastBootHours":  1.3,
+                    "systemDrive":  "C:",
+                    "longPaths":  true,
+                    "pageFile":  {
+                                     "automatic":  true,
+                                     "files":  [
+                                                   {
+                                                       "name":  "C:\\pagefile.sys",
+                                                       "allocatedMb":  4096,
+                                                       "peakMb":  0
+                                                   }
+                                               ]
+                                 },
+                    "startupItems":  [
+                                         {
+                                             "name":  "MEGAsync",
+                                             "command":  "MEGAsync.lnk",
+                                             "location":  "Startup"
+                                         },
+                                         {
+                                             "name":  "OneDrive",
+                                             "command":  "\"C:\\Users\\johnk\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe\" /background",
+                                             "location":  "HKU\\S-1-5-21-3799742923-1758735689-2629271535-1001\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+                                         },
+                                         {
+                                             "name":  "Microsoft.Lists",
+                                             "command":  "C:\\Users\\johnk\\AppData\\Local\\Microsoft\\OneDrive\\26.183.0920.0005\\OneDrive.Sync.Service.exe",
+                                             "location":  "HKU\\S-1-5-21-3799742923-1758735689-2629271535-1001\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+                                         },
+                                         {
+                                             "name":  "LGHUB",
+                                             "command":  "\"C:\\Program Files\\LGHUB\\system_tray\\lghub_system_tray.exe\" --minimized",
+                                             "location":  "HKU\\S-1-5-21-3799742923-1758735689-2629271535-1001\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+                                         },
+                                         {
+                                             "name":  "MTM_Waitlist.Mock.Service",
+                                             "command":  "\"C:\\Services\\MTM_Waitlist.Mock.Service\\MTM_Waitlist.Mock.Service.exe\"",
+                                             "location":  "HKU\\S-1-5-21-3799742923-1758735689-2629271535-1001\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+                                         },
+                                         {
+                                             "name":  "RtkAudUService",
+                                             "command":  "\"C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\realtekservice.inf_amd64_49e3c0efb244cb40\\RtkAudUService64.exe\" -background",
+                                             "location":  "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+                                         },
+                                         {
+                                             "name":  "Logitech Download Assistant",
+                                             "command":  "C:\\Windows\\system32\\rundll32.exe C:\\Windows\\System32\\LogiLDA.dll,LogiFetch",
+                                             "location":  "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+                                         }
+                                     ]
+                },
+    "performance":  {
+                        "powerPlan":  "Ultimate Performance",
+                        "powerPlanGuid":  "c81be967-4eae-42ae-b8c8-30b8232d9948",
+                        "powerPlans":  [
+                                           {
+                                               "id":  "381b4222-f694-41f0-9685-ff5bb260df2e",
+                                               "name":  "Balanced",
+                                               "active":  false
+                                           },
+                                           {
+                                               "id":  "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+                                               "name":  "High performance",
+                                               "active":  false
+                                           },
+                                           {
+                                               "id":  "a1841308-3541-4fab-bc81-f71556f20b4a",
+                                               "name":  "Power saver",
+                                               "active":  false
+                                           },
+                                           {
+                                               "id":  "c81be967-4eae-42ae-b8c8-30b8232d9948",
+                                               "name":  "Ultimate Performance",
+                                               "active":  true
+                                           }
+                                       ],
+                        "gameMode":  true,
+                        "gameDvrEnabled":  false,
+                        "hardwareScheduling":  true,
+                        "hardwareSchedulingRaw":  2,
+                        "memoryIntegrity":  true,
+                        "vbsConfigured":  null,
+                        "hypervisorLaunch":  "",
+                        "defender":  {
+                                         "realtimeDisabled":  false,
+                                         "exclusionCount":  1,
+                                         "exclusions":  [
+                                                            "N/A: Must be an administrator to view exclusions"
+                                                        ]
+                                     }
+                    },
+    "tooling":  {
+                    "dotnet":  "10.0.402",
+                    "git":  "git version 2.55.0.windows.5",
+                    "node":  "v26.5.1",
+                    "npm":  "11.6.1",
+                    "python":  "Python 3.10.11",
+                    "pip":  "pip 26.1.2 from C:\\Users\\johnk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pip (python 3.10)",
+                    "docker":  null,
+                    "code":  "1.141.0",
+                    "ollama":  null,
+                    "nvidia":  "NVIDIA GeForce RTX 5070 Ti, 617.42, 16303 MiB"
+                },
+    "aiTools":  {
+                    "lmStudio":  true,
+                    "ollamaDataDir":  true
+                },
+    "dotnetSdks":  [
+                       "8.0.426",
+                       "10.0.113",
+                       "10.0.303",
+                       "10.0.402"
+                   ],
+    "wslDistros":  [
+
+                   ],
+    "environment":  {
+                        "tempPath":  "C:\\Users\\johnk\\AppData\\Local\\Temp",
+                        "processorCount":  "32"
+                    }
+}

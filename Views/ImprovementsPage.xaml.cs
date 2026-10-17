@@ -8,6 +8,9 @@ namespace SystemCompanion.Views;
 
 public sealed partial class ImprovementsPage : Page
 {
+    /// <summary>The page width below which the overall score card drops under the headline.</summary>
+    private const double WideHeroWidth = 720;
+
     private readonly List<ToggleButton> _chips = new();
 
     public ImprovementsViewModel ViewModel { get; private set; }
@@ -30,6 +33,18 @@ public sealed partial class ImprovementsPage : Page
         }
 
         DispatcherQueue.TryEnqueue(() => PageScroll.ChangeView(null, 0, null, true));
+    }
+
+    private void ImprovementsPage_SizeChanged(object sender, SizeChangedEventArgs e)
+    {
+        var wide = e.NewSize.Width >= WideHeroWidth;
+
+        Grid.SetRow(OverallPanel, wide ? 0 : 1);
+        Grid.SetColumn(OverallPanel, wide ? 1 : 0);
+        Grid.SetColumnSpan(OverallPanel, wide ? 1 : 2);
+        OverallPanel.HorizontalAlignment = wide
+            ? HorizontalAlignment.Stretch
+            : HorizontalAlignment.Left;
     }
 
     private void Chip_Click(object sender, RoutedEventArgs e)

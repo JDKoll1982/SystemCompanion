@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="using:SystemCompanion.Models"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    SizeChanged="ImprovementsPage_SizeChanged">
 
     <ScrollViewer x:Name="PageScroll" Padding="0,0,8,0" VerticalScrollBarVisibility="Auto">
         <StackPanel
@@ -16,11 +17,15 @@
 
             <!--  Hero  -->
             <Border Style="{StaticResource HeroCard}">
-                <Grid ColumnSpacing="28">
+                <Grid ColumnSpacing="28" RowSpacing="12">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
                     <StackPanel Spacing="8">
                         <TextBlock Style="{StaticResource EyebrowText}" Text="WHAT COULD BE BETTER" />
@@ -73,7 +78,11 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="6">
+                    <StackPanel
+                        x:Name="OverallPanel"
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Spacing="6">
                         <Border
                             Padding="18,14"
                             Background="#12FFFFFF"
@@ -96,43 +105,49 @@
                 </Grid>
             </Border>
 
-            <!--  Filter chips  -->
-            <StackPanel Orientation="Horizontal" Spacing="0">
-                <ToggleButton
-                    x:Name="ChipAll"
-                    Click="Chip_Click"
-                    Content="Everything"
-                    IsChecked="True"
-                    Style="{StaticResource ChipButton}"
-                    Tag="All" />
-                <ToggleButton
-                    x:Name="ChipProgramming"
-                    Click="Chip_Click"
-                    Content="Programming"
-                    Style="{StaticResource ChipButton}"
-                    Tag="Programming" />
-                <ToggleButton
-                    x:Name="ChipGaming"
-                    Click="Chip_Click"
-                    Content="Gaming"
-                    Style="{StaticResource ChipButton}"
-                    Tag="Gaming" />
-                <ToggleButton
-                    x:Name="ChipAi"
-                    Click="Chip_Click"
-                    Content="AI work"
-                    Style="{StaticResource ChipButton}"
-                    Tag="Ai" />
-                <ToggleButton
-                    x:Name="ChipEveryday"
-                    Click="Chip_Click"
-                    Content="Everyday"
-                    Style="{StaticResource ChipButton}"
-                    Tag="Everyday" />
+            <!--  Filter chips scroll sideways rather than clipping on a narrow window.  -->
+            <StackPanel Spacing="6">
+                <ScrollViewer
+                    HorizontalScrollBarVisibility="Auto"
+                    HorizontalScrollMode="Auto"
+                    VerticalScrollBarVisibility="Disabled"
+                    VerticalScrollMode="Disabled">
+                    <StackPanel Orientation="Horizontal" Spacing="0">
+                        <ToggleButton
+                            x:Name="ChipAll"
+                            Click="Chip_Click"
+                            Content="Everything"
+                            IsChecked="True"
+                            Style="{StaticResource ChipButton}"
+                            Tag="All" />
+                        <ToggleButton
+                            x:Name="ChipProgramming"
+                            Click="Chip_Click"
+                            Content="Programming"
+                            Style="{StaticResource ChipButton}"
+                            Tag="Programming" />
+                        <ToggleButton
+                            x:Name="ChipGaming"
+                            Click="Chip_Click"
+                            Content="Gaming"
+                            Style="{StaticResource ChipButton}"
+                            Tag="Gaming" />
+                        <ToggleButton
+                            x:Name="ChipAi"
+                            Click="Chip_Click"
+                            Content="AI work"
+                            Style="{StaticResource ChipButton}"
+                            Tag="Ai" />
+                        <ToggleButton
+                            x:Name="ChipEveryday"
+                            Click="Chip_Click"
+                            Content="Everyday"
+                            Style="{StaticResource ChipButton}"
+                            Tag="Everyday" />
+                    </StackPanel>
+                </ScrollViewer>
 
                 <TextBlock
-                    Margin="14,0,0,0"
-                    VerticalAlignment="Center"
                     Style="{StaticResource CaptionText}"
                     Text="{x:Bind ViewModel.VisibleText, Mode=OneWay}" />
             </StackPanel>

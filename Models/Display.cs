@@ -3,6 +3,37 @@ using SystemCompanion.Styles;
 
 namespace SystemCompanion.Models;
 
+/// <summary>
+/// The one place that decides how a value that was not read is shown, and how a
+/// measurement is worded. A screen must never substitute a plausible number.
+/// </summary>
+public static class Display
+{
+    /// <summary>The exact text for a value that is absent, unreadable or not applicable.</summary>
+    public const string Unknown = "Unknown";
+
+    public static string Text(string? value)
+        => string.IsNullOrWhiteSpace(value) ? Unknown : value.Trim();
+
+    public static string Number(double? value, string unit = "", string format = "0.#")
+    {
+        if (value is null)
+        {
+            return Unknown;
+        }
+
+        var text = value.Value.ToString(format, System.Globalization.CultureInfo.InvariantCulture);
+        return unit.Length == 0 ? text : text + " " + unit;
+    }
+
+    public static string Number(int? value, string unit = "")
+        => value is null ? Unknown : Number(value.Value, unit, "0");
+
+    /// <summary>Some values are genuinely not applicable, for example a virtual display's memory.</summary>
+    public static string NotApplicable(string reason)
+        => string.IsNullOrWhiteSpace(reason) ? Unknown : reason;
+}
+
 /// <summary>A small headline tile: label, big value, one-line explanation.</summary>
 public sealed class FactTile
 {

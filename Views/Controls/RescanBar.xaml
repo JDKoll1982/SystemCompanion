@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<UserControl
+    x:Class="SystemCompanion.Views.Controls.RescanBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel
+        VerticalAlignment="Center"
+        Orientation="Horizontal"
+        Spacing="8">
+        <ProgressRing
+            x:Name="Progress"
+            Width="16"
+            Height="16"
+            IsActive="False"
+            Visibility="Collapsed" />
+        <TextBlock
+            x:Name="Message"
+            MaxWidth="320"
+            VerticalAlignment="Center"
+            FontSize="12"
+            Foreground="{StaticResource TextMidBrush}"
+            TextTrimming="CharacterEllipsis"
+            Visibility="Collapsed" />
+        <Button
+            x:Name="ScanButton"
+            Padding="12,6"
+            Click="ScanButton_Click"
+            Content="Take a new reading"
+            FontSize="12" />
+    </StackPanel>
+</UserControl>
