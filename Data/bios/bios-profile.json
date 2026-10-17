@@ -1,0 +1,261 @@
+{
+ "generatedAt": "2026-10-17T13:30:06",
+ "file": {
+  "name": "MsOcFile.ocb",
+  "board": "MSI PRO Z790-P WIFI (MS-7E06)",
+  "biosVersion": "E7E06IMS.AK0",
+  "savedOn": "17 Oct 2026 at 12:35",
+  "savedOnDay": "Saturday",
+  "valid": true,
+  "checksum": "0xFFFE43ED",
+  "sizeBytes": 11889,
+  "savedVariables": 22,
+  "changedBytes": 72,
+  "cpu": "Intel(R) Core(TM) i9-14900K"
+ },
+ "headline": [
+  {
+   "label": "Fast memory profile",
+   "value": "Profile 1",
+   "plain": "Your memory is running its advertised fast profile instead of the slow safe default.",
+   "state": "good"
+  },
+  {
+   "label": "Memory speed",
+   "value": "6000 MT/s",
+   "plain": "The speed stored in the BIOS profile for your memory.",
+   "state": "good"
+  },
+  {
+   "label": "CPU tuning mode",
+   "value": "Expert",
+   "plain": "The full expert menu is switched on, so every setting below is available.",
+   "state": "neutral"
+  },
+  {
+   "label": "Profile saved",
+   "value": "17 Oct, 12:35",
+   "plain": "Saved on a Saturday. This file is a snapshot of the BIOS at that moment.",
+   "state": "neutral"
+  }
+ ],
+ "sections": [
+  {
+   "title": "Memory",
+   "subtitle": "How fast your memory talks to the CPU",
+   "icon": "\ue950",
+   "items": [
+    {
+     "name": "Fast memory profile (XMP)",
+     "value": "Profile 1",
+     "plain": "One switch that loads the memory maker's tested fast settings.",
+     "state": "good",
+     "changed": true
+    },
+    {
+     "name": "Memory speed",
+     "value": "6000 MT/s",
+     "plain": "Bigger numbers mean the memory can hand data over faster.",
+     "state": "good",
+     "changed": true
+    },
+    {
+     "name": "Timing mode",
+     "value": "Link",
+     "plain": "Linked keeps all memory sticks on the same timing rules, which is the safe choice.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Memory Try It!",
+     "value": "Disabled",
+     "plain": "A built-in overclocking shortcut. Leaving it off means the fast profile is doing the work.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Memory extension mode",
+     "value": "Disabled",
+     "plain": "Extra tuning for memory performance. Off is the normal, stable setting.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Retry count after a failed memory boot",
+     "value": "2",
+     "plain": "If the fast profile ever fails to start, the board tries this many times before falling back.",
+     "state": "good",
+     "changed": false
+    },
+    {
+     "name": "Fast boot",
+     "value": "Auto",
+     "plain": "Shortens memory training on every start. Auto lets the board decide.",
+     "state": "neutral",
+     "changed": false
+    }
+   ]
+  },
+  {
+   "title": "Processor",
+   "subtitle": "How the CPU is allowed to boost",
+   "icon": "\ue9d9",
+   "items": [
+    {
+     "name": "CPU cooler profile",
+     "value": "Intel Default Settings",
+     "plain": "Tells the board what cooling you have. It decides the power limits.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "P-core ratio",
+     "value": "Auto",
+     "plain": "The main speed multiplier. Auto means the CPU picks its own safe boost.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "E-core ratio",
+     "value": "Auto",
+     "plain": "The multiplier for the small efficiency cores. Auto is the normal choice.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Ratio apply mode",
+     "value": "All Core",
+     "plain": "All Core means every core follows the same rule.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Ring ratio",
+     "value": "Auto",
+     "plain": "The speed of the CPU's internal shared cache. Auto is normal.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Base clock",
+     "value": "CPU Base Clock (MHz)",
+     "plain": "The heartbeat everything else multiplies from. 100.00 is the stock value.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "CPU current limit",
+     "value": "Auto",
+     "plain": "A safety ceiling on electrical current. Auto follows the cooler profile.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Long duration power limit",
+     "value": "Auto",
+     "plain": "How many watts the CPU may use for long jobs. Auto follows the cooler profile.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Short duration power limit",
+     "value": "Auto",
+     "plain": "How many watts the CPU may use briefly for bursty jobs.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "CPU Lite Load",
+     "value": "Auto",
+     "plain": "How aggressively the board feeds voltage. Auto is the safe default.",
+     "state": "neutral",
+     "changed": false
+    }
+   ]
+  },
+  {
+   "title": "Voltages",
+   "subtitle": "Electrical settings that are best left alone",
+   "icon": "\ue945",
+   "items": [
+    {
+     "name": "CPU core voltage",
+     "value": "Auto",
+     "plain": "Auto lets the CPU ask for exactly what it needs.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "System agent voltage",
+     "value": "Auto",
+     "plain": "Feeds the part of the CPU that talks to memory.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "CPU VDDQ voltage",
+     "value": "-",
+     "plain": "A memory-related CPU voltage.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "CPU VDD2 voltage",
+     "value": "Auto",
+     "plain": "Another memory-related CPU voltage.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Memory voltage",
+     "value": "Auto",
+     "plain": "Auto follows the fast memory profile you selected.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Memory VDDQ voltage",
+     "value": "Auto",
+     "plain": "Memory signalling voltage.",
+     "state": "neutral",
+     "changed": false
+    },
+    {
+     "name": "Memory VPP voltage",
+     "value": "Auto",
+     "plain": "Memory activation voltage.",
+     "state": "neutral",
+     "changed": false
+    }
+   ]
+  },
+  {
+   "title": "Other saved details",
+   "subtitle": "Smaller settings stored in the same file",
+   "icon": "\ue946",
+   "items": [
+    {
+     "name": "DMI link speed",
+     "value": "Auto",
+     "plain": "The link between the CPU and the chipset. Gen4 is the fastest this board supports.",
+     "state": "good",
+     "changed": false
+    },
+    {
+     "name": "Memory changed detection",
+     "value": "Enabled",
+     "plain": "The board notices when memory has been swapped and retrains it.",
+     "state": "good",
+     "changed": false
+    },
+    {
+     "name": "Boot straight to the simple screen",
+     "value": "Disabled",
+     "plain": "Whether the BIOS opens on its easy screen. Off means it opens in the advanced menu.",
+     "state": "neutral",
+     "changed": true
+    }
+   ]
+  }
+ ]
+}

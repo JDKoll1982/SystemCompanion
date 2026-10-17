@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SystemCompanion (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "SystemCompanion (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

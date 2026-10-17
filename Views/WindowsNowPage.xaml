@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="SystemCompanion.Views.WindowsNowPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:SystemCompanion.Models"
+    mc:Ignorable="d">
+
+    <ScrollViewer x:Name="PageScroll" Padding="0,0,8,0" VerticalScrollBarVisibility="Auto">
+        <StackPanel
+            MaxWidth="1180"
+            HorizontalAlignment="Stretch"
+            Spacing="18">
+
+            <Border Style="{StaticResource HeroCard}">
+                <StackPanel Spacing="18">
+                    <StackPanel Spacing="8">
+                        <TextBlock Style="{StaticResource EyebrowText}" Text="RIGHT NOW" />
+                        <TextBlock Style="{StaticResource DisplayText}" Text="{x:Bind ViewModel.MachineName}" />
+                        <TextBlock
+                            MaxWidth="780"
+                            Style="{StaticResource BodyText}"
+                            Text="A live reading of the hardware and of the Windows settings that decide how fast everything feels." />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Border
+                            Padding="12,6"
+                            Background="#14FFFFFF"
+                            BorderBrush="#22FFFFFF"
+                            BorderThickness="1"
+                            CornerRadius="14">
+                            <TextBlock Style="{StaticResource PillText}" Text="{x:Bind ViewModel.Board}" />
+                        </Border>
+                        <Border
+                            Padding="12,6"
+                            Background="#14FFFFFF"
+                            BorderBrush="#22FFFFFF"
+                            BorderThickness="1"
+                            CornerRadius="14">
+                            <TextBlock Style="{StaticResource PillText}" Text="{x:Bind ViewModel.BiosVersion}" />
+                        </Border>
+                        <Border
+                            Padding="12,6"
+                            Background="#14FFFFFF"
+                            BorderBrush="#22FFFFFF"
+                            BorderThickness="1"
+                            CornerRadius="14">
+                            <TextBlock Style="{StaticResource PillText}" Text="{x:Bind ViewModel.ScannedAt}" />
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <ItemsRepeater ItemsSource="{x:Bind ViewModel.Headline}">
+                <ItemsRepeater.Layout>
+                    <UniformGridLayout
+                        ItemsStretch="Fill"
+                        MinColumnSpacing="14"
+                        MinItemWidth="230"
+                        MinRowSpacing="14" />
+                </ItemsRepeater.Layout>
+                <ItemsRepeater.ItemTemplate>
+                    <DataTemplate x:DataType="models:FactTile">
+                        <Border
+                            MinHeight="150"
+                            Style="{StaticResource Card}"
+                            Padding="20">
+                            <StackPanel Spacing="6">
+                                <Border
+                                    Width="30"
+                                    Height="4"
+                                    HorizontalAlignment="Left"
+                                    Background="{x:Bind AccentBrush}"
+                                    CornerRadius="2" />
+                                <TextBlock
+                                    Margin="0,6,0,0"
+                                    Style="{StaticResource EyebrowText}"
+                                    Foreground="{StaticResource TextLoBrush}"
+                                    Text="{x:Bind Label}" />
+                                <TextBlock
+                                    FontFamily="Segoe UI Variable Display"
+                                    FontSize="24"
+                                    FontWeight="SemiBold"
+                                    Foreground="{StaticResource TextHiBrush}"
+                                    Text="{x:Bind Value}"
+                                    TextLineBounds="Tight" />
+                                <TextBlock
+                                    MaxWidth="300"
+                                    Style="{StaticResource CaptionText}"
+                                    Text="{x:Bind Plain}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+
+            <ItemsRepeater ItemsSource="{x:Bind ViewModel.Sections}">
+                <ItemsRepeater.Layout>
+                    <UniformGridLayout
+                        ItemsStretch="Fill"
+                        MinColumnSpacing="16"
+                        MinItemWidth="520"
+                        MinRowSpacing="16" />
+                </ItemsRepeater.Layout>
+                <ItemsRepeater.ItemTemplate>
+                    <DataTemplate x:DataType="models:SectionCard">
+                        <Border Style="{StaticResource Card}">
+                            <StackPanel Spacing="4">
+                                <StackPanel
+                                    Margin="0,0,0,10"
+                                    Orientation="Horizontal"
+                                    Spacing="10">
+                                    <Border
+                                        Width="32"
+                                        Height="32"
+                                        Background="#1A4CD7F0"
+                                        CornerRadius="9">
+                                        <FontIcon
+                                            FontSize="14"
+                                            Foreground="{StaticResource CyanBrush}"
+                                            Glyph="{x:Bind Icon}" />
+                                    </Border>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource H2Text}" Text="{x:Bind Title}" />
+                                        <TextBlock
+                                            Style="{StaticResource CaptionText}"
+                                            Text="{x:Bind Subtitle}"
+                                            Visibility="{x:Bind SubtitleVisibility}" />
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <ItemsRepeater ItemsSource="{x:Bind Rows}">
+                                    <ItemsRepeater.Layout>
+                                        <StackLayout Spacing="0" />
+                                    </ItemsRepeater.Layout>
+                                    <ItemsRepeater.ItemTemplate>
+                                        <DataTemplate x:DataType="models:InfoRow">
+                                            <Border BorderBrush="#1424303F" BorderThickness="0,0,0,1">
+                                                <Grid Padding="0,11,0,11" ColumnSpacing="10">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="4" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <Border
+                                                    Grid.Column="0"
+                                                    Width="3"
+                                                    Margin="0,2,0,2"
+                                                    Background="{x:Bind AccentBrush}"
+                                                    CornerRadius="2"
+                                                    Opacity="0.55"
+                                                    Visibility="{x:Bind ChangedVisibility}" />
+
+                                                <StackPanel Grid.Column="1" Spacing="2">
+                                                    <TextBlock
+                                                        FontSize="13"
+                                                        Foreground="{StaticResource TextMidBrush}"
+                                                        Text="{x:Bind Name}"
+                                                        TextWrapping="Wrap" />
+                                                    <TextBlock
+                                                        MaxWidth="420"
+                                                        Style="{StaticResource CaptionText}"
+                                                        Text="{x:Bind Plain}"
+                                                        Visibility="{x:Bind PlainVisibility}" />
+                                                </StackPanel>
+
+                                                <TextBlock
+                                                    Grid.Column="2"
+                                                    MaxWidth="240"
+                                                    FontFamily="Segoe UI Variable Text"
+                                                    FontSize="13"
+                                                    FontWeight="SemiBold"
+                                                    Foreground="{StaticResource TextHiBrush}"
+                                                    Text="{x:Bind Value}"
+                                                    TextAlignment="Right"
+                                                    TextWrapping="Wrap" />
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsRepeater.ItemTemplate>
+                                </ItemsRepeater>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+
+            <Border Style="{StaticResource SoftCard}" Margin="0,4,0,8">
+                <StackPanel Spacing="4">
+                    <TextBlock Style="{StaticResource EyebrowText}" Foreground="{StaticResource TextLoBrush}" Text="HOW THIS WAS MEASURED" />
+                    <TextBlock
+                        Style="{StaticResource BodyText}"
+                        FontSize="12.5"
+                        Text="Windows reports these values itself. Nothing here was changed — the scanner only reads. Run tools\discover-system.ps1 again whenever you want a fresh reading." />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

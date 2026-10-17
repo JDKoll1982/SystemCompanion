@@ -1,0 +1,205 @@
+MSI OC profile (MsOcFile.ocb) - decoded
+==============================================================================
+board             : E7E06IMS
+BIOS version      : E7E06IMS.AK0
+file size         : 11889 bytes
+checksum @0x11   : 0xFFFE43ED  VALID
+record count      : 114 (walked 114, table ends 0x2D1B)
+saved (ASCII)     : 2026-10-17T12:35:45  @0x2E4A
+saved (BCD)       : 2026-10-17T12:35:45  @0x2D1B  [45 00 35 00 12 00 06 17 10 26]
+$OCI$ trailer     : @0x2E14  E$OCI$ | E7E06IMS | AK0 | Intel(R) Core(TM) i9-14900K | 20261017123545
+trailing u32      : 10000, 32, 888, 4000, 1120, 33
+
+records carrying a setup variable (name resolved from BIOS defaults)
+------------------------------------------------------------------------------
+    id   payload  length   match  varstore           changed
+0x0000  0x001F    5081   0.990  Setup                                             49
+0x0001  0x13FE       7   0.857  PlatformLang                                       0
+0x0002  0x140B       2   1.000  Timeout                                            0
+0x0005  0x1413      82   1.000  AMITSESetup                                        0
+0x0040  0x15D3     961   0.997  CpuSetup                                           3
+0x0043  0x19EA    1400   0.992  SaSetup                                           11
+0x0045  0x1F74    2063   1.000  PchSetup                                           1
+0x0046  0x2789      17   1.000  NhltEndpointsTableConfigurationVariable            0
+0x0047  0x27A0      54   0.963  MeSetup                                            2
+0x0048  0x27DC      18   0.833  MeSetupStorage                                     3
+0x004C  0x2815       7   1.000  SiSetup                                            0
+0x004E  0x282C      12   1.000  LpeSetup                                           0
+0x004F  0x283E      17   1.000  DebugConfigData                                    0
+0x0050  0x2855       3   1.000  PcieSataModVar                                     0
+0x005D  0x28D3       5   1.000  AmiWrapperSetup                                    0
+0x005E  0x28DE       2   1.000  AhciSetup                                          0
+0x0061  0x28F6       1   1.000  SioSetupData                                       0
+0x0065  0x2935      49   1.000  UsbSupport                                         0
+0x0066  0x296C       8   1.000  NetworkStackVar                                    0
+0x0067  0x297A       7   1.000  SecureBootSetup                                    0
+0x006E  0x29B0      14   0.857  FixedBootGroup                                     2
+0x0077  0x2A87     648   0.997  FixedBoot                                          2
+
+other payloads without a BIOS default (30 records)
+------------------------------------------------------------------------------
+0x0012  0x149B       4  00 00 00 00
+0x0013  0x14A5       8  00 00 00 00 00 00 00 00
+0x0014  0x14B3       8  00 00 00 00 00 00 00 00
+0x0016  0x14C7       2  00 00
+0x0037  0x158F       2  00 00
+0x0039  0x159D      14  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x003C  0x15B7       2  "en"
+0x003D  0x15BF       1  00
+0x003F  0x15CC       1  00
+0x0041  0x199A      57  01 01 01 01 01 01 01 00 01 01 01 01 00 01 00 01 00 01 01 01 01 08 00 00
+0x0042  0x19D9      11  70 06 0b 00 01 00 00 00 01 00 01
+0x0044  0x1F68       6  01 00 00 00 00 00
+0x0049  0x27F4      15  00 00 00 00 00 00 00 00 39 00 01 00 00 00 00
+0x004D  0x2822       4  00 00 00 00
+0x0051  0x285E      36  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x005C  0x28BE      15  00 00 00 01 01 01 01 01 02 70 06 0b 00 01 01
+0x005F  0x28E6       2  01 01
+0x0060  0x28EE       2  00 00
+0x0062  0x28FD       2  01 00
+0x0063  0x2905      32  01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0x0064  0x292B       4  00 00 00 01
+0x0069  0x298D       1  01
+0x006A  0x2994       1  00
+0x006B  0x299B       1  01
+0x006C  0x29A2       1  00
+0x006D  0x29A9       1  00
+0x006F  0x29C4       1  10
+0x0070  0x29CB      33  01 01 12 12 01 01 01 12 12 01 01 01 01 00 00 00 00 00 00 00 00 01 01 01
+0x0071  0x29F2     109  39 00 02 01 00 01 09 01 00 01 00 00 01 01 00 00 00 01 00 01 01 01 00 00
+0x0073  0x2A6B       4  01 00 00 00
+
+key overclocking settings as stored in this profile
+------------------------------------------------------------------------------
+varstore    varoff  setting                                                value
+Setup     0x0C62      OC Explore Mode                                   Expert (2)
+Setup     0x0C66      P-Core Ratio                                        Auto (0)
+Setup     0x0C67      E-Core Ratio                                        Auto (0)
+Setup     0x0C68      CPU Ratio Mode                              Dynamic Mode (2)
+Setup     0x0C69      P-Core Ratio Apply Mode                         All Core (1)
+Setup     0x0C6A      E-Core Ratio Apply Mode                         All Core (1)
+Setup     0x0CA7      Ring Ratio                                          Auto (0)
+Setup     0x0CA8      Ring Ratio Min                                      Auto (0)
+Setup     0x0CAD      CPU Ratio Offset When Running AVX                  Auto (32)
+Setup     0x0CAE      CPU Ratio Offset When Running AVX-512              Auto (32)
+Setup     0x0CB2      CPU Core Voltage Mode                               Auto (0)
+Setup     0x0CB3      CPU Core Voltage                                    Auto (0)
+Setup     0x0CB5      CPU Core Voltage Offset Mode                        Auto (0)
+Setup     0x0CB6      CPU Core Voltage Offset                             Auto (0)
+Setup     0x0D38      DRAM Frequency                                      Auto (0) (+20 more)
+Setup     0x0E65      Extreme Memory Profile(XMP)                    Profile 1 (1) *
+Setup     0x0F10      CPU VDDQ Voltage                                    Auto (0)
+Setup     0x0F29      CPU Current Limit(A)                                Auto (0)
+Setup     0x0F2D      CPU Base Clock (MHz)                                   10000
+Setup     0x0F2F      CPU Base Clock Apply Mode                           Auto (0)
+Setup     0x0F30      BCLK 100MHz Lock On                             Disabled (0)
+Setup     0x0F3D      DRAM Voltage Boost                                  Auto (1)
+Setup     0x0F62      CPU Lite Load Control                             Normal (0)
+Setup     0x0F63      CPU Lite Load                                       Auto (0)
+Setup     0x0F8F      DRAM Voltage Mode                                   Link (1)
+Setup     0x0F90      DRAM Voltage                                        Auto (0) (+8 more)
+CpuSetup  0x0017      Long Duration Power Limit(W)                        Auto (0)
+CpuSetup  0x001B      Power Limit 1 Override                          Disabled (0)
+CpuSetup  0x001D      Power Limit 2 Override                           Enabled (1)
+CpuSetup  0x001E      Short Duration Power Limit(W)                       Auto (0)
+CpuSetup  0x005B      Power Limit 1                                       Auto (0) (+2 more)
+CpuSetup  0x005F      Power Limit 2                                       Auto (0) (+2 more)
+CpuSetup  0x0063      Power Limit 1 Time Window                              0 (0) (+2 more)
+CpuSetup  0x020D      BCLK Aware Adaptive Voltage                      Enabled (1)
+CpuSetup  0x0344      BCLK TSC HW Fixup                                Enabled (0)
+SaSetup   0x0003      Memory Voltage                                      Auto (0)
+SaSetup   0x03F5      Memory Voltage VDDQ                                 Auto (0)
+SaSetup   0x03F7      Memory Voltage VPP                                  Auto (0)
+
+(* = differs from the BIOS factory default)
+
+every byte that differs from the BIOS factory default
+------------------------------------------------------------------------------
+== Setup
+  varoff   fileoff  size  setting                                          default -> value
+0x0014    0x0033     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x001A    0x0039     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0023    0x0042     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0024    0x0043     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0026    0x0045     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0B8E    0x0BAD     1  DMI Gen3 RTCO Cpre Lane0                               0 -> 5
+0x0B8F    0x0BAE     1  DMI Gen3 RTCO Cpre Lane1                               0 -> 5
+0x0B90    0x0BAF     1  DMI Gen3 RTCO Cpre Lane2                               0 -> 3
+0x0B91    0x0BB0     1  DMI Gen3 RTCO Cpre Lane3                               0 -> 5
+0x0B92    0x0BB1     1  DMI Gen3 RTCO Cpre Lane4                               0 -> 5
+0x0B93    0x0BB2     1  DMI Gen3 RTCO Cpre Lane5                               0 -> 3
+0x0B94    0x0BB3     1  DMI Gen3 RTCO Cpre Lane6                               0 -> 5
+0x0B95    0x0BB4     1  DMI Gen3 RTCO Cpre Lane7                               0 -> 3
+0x0B96    0x0BB5     1  DMI Gen3 RTCO Cpost Lane0                              0 -> 5
+0x0B97    0x0BB6     1  DMI Gen3 RTCO Cpost Lane1                              0 -> 5
+0x0B98    0x0BB7     1  DMI Gen3 RTCO Cpost Lane2                              0 -> 3
+0x0B99    0x0BB8     1  DMI Gen3 RTCO Cpost Lane3                              0 -> 5
+0x0B9A    0x0BB9     1  DMI Gen3 RTCO Cpost Lane4                              0 -> 5
+0x0B9B    0x0BBA     1  DMI Gen3 RTCO Cpost Lane5                              0 -> 3
+0x0B9C    0x0BBB     1  DMI Gen3 RTCO Cpost Lane6                              0 -> 5
+0x0B9D    0x0BBC     1  DMI Gen3 RTCO Cpost Lane7                              0 -> 3
+0x0B9E    0x0BBD     1  DMI Gen4 RTCO Cpre Lane0                               0 -> 10
+0x0B9F    0x0BBE     1  DMI Gen4 RTCO Cpre Lane1                              14 -> 10
+0x0BA1    0x0BC0     1  DMI Gen4 RTCO Cpre Lane3                               7 -> 10
+0x0BA2    0x0BC1     1  DMI Gen4 RTCO Cpre Lane4                               7 -> 10
+0x0BA3    0x0BC2     1  DMI Gen4 RTCO Cpre Lane5                               7 -> 10
+0x0BA4    0x0BC3     1  DMI Gen4 RTCO Cpre Lane6                               7 -> 10
+0x0BA5    0x0BC4     1  DMI Gen4 RTCO Cpost Lane7                              7 -> 10
+0x0BA6    0x0BC5     1  DMI Gen4 RTCO Cpost Lane0                              0 -> 6
+0x0BA7    0x0BC6     1  DMI Gen4 RTCO Cpost Lane1                              7 -> 6
+0x0BA9    0x0BC8     1  DMI Gen4 RTCO Cpost Lane3                              7 -> 6
+0x0BAA    0x0BC9     1  DMI Gen4 RTCO Cpost Lane4                              7 -> 6
+0x0BAB    0x0BCA     1  DMI Gen4 RTCO Cpost Lane5                              7 -> 6
+0x0BAC    0x0BCB     1  DMI Gen4 RTCO Cpost Lane6                              7 -> 6
+0x0BAD    0x0BCC     1  DMI Gen4 RTCO Cpre Lane7                               7 -> 6
+0x0BAE    0x0BCD     1  DMI Gen4 EQ Mode                               HW EQ (2) -> Fixed EQ (1)
+0x0BBE    0x0BDD     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0D34    0x0D53     2  Adjusted DRAM Frequency Value                       2133 -> 6000
+0x0E65    0x0E84     1  Extreme Memory Profile(XMP)                 Disabled (0) -> Profile 1 (1)
+0x119C    0x11BB     1  Default EZ Mode                                        1 -> Disabled (0)
+0x1288    0x12A7     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x12B8    0x12D7     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x12D3    0x12F2     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x12EE    0x130D     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x1309    0x1328     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x1324    0x1343     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x133F    0x135E     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0BB2    0x0BD1     1  (no BIOS question at this offset)                      0 -> 1
+== CpuSetup
+  varoff   fileoff  size  setting                                          default -> value
+0x0113    0x16E6     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x02AB    0x187E     1  (unnamed, Overclocking Profile 8)                      0 -> 16
+0x02AC    0x187F     1  (unnamed, Overclocking Profile 8)                      0 -> 8
+== SaSetup
+  varoff   fileoff  size  setting                                          default -> value
+0x00F7    0x1AE1     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0156    0x1B40     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0157    0x1B41     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0158    0x1B42     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0002    0x19EC     1  (no BIOS question at this offset)                      0 -> 1
+0x0028    0x1A12     1  (no BIOS question at this offset)                      0 -> 128
+0x0029    0x1A13     1  (no BIOS question at this offset)                      0 -> 167
+0x0118    0x1B02     1  (no BIOS question at this offset)                      0 -> 6
+0x0119    0x1B03     1  (no BIOS question at this offset)                      0 -> 29
+0x011A    0x1B04     1  (no BIOS question at this offset)                      0 -> 23
+0x03A9    0x1D93     1  (no BIOS question at this offset)                      0 -> 1
+== PchSetup
+  varoff   fileoff  size  setting                                          default -> value
+0x0003    0x1F77     1  (no BIOS question at this offset)                      0 -> 167
+== MeSetup
+  varoff   fileoff  size  setting                                          default -> value
+0x0002    0x27A2     1  (unnamed, Overclocking Profile 8)                      0 -> 3
+0x000F    0x27AF     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+== MeSetupStorage
+  varoff   fileoff  size  setting                                          default -> value
+0x0011    0x27ED     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x0005    0x27E1     1  (no BIOS question at this offset)                      0 -> 1
+0x000C    0x27E8     1  (no BIOS question at this offset)                      0 -> 1
+== FixedBootGroup
+  varoff   fileoff  size  setting                                          default -> value
+0x0007    0x29B7     1  (unnamed, Overclocking Profile 8)                      0 -> 1
+0x000A    0x29BA     1  (unnamed, Overclocking Profile 8)                      0 -> 3
+== FixedBoot
+  varoff   fileoff  size  setting                                          default -> value
+0x0169    0x2BF0     1  (no BIOS question at this offset)                      0 -> 1
+0x016A    0x2BF1     1  (no BIOS question at this offset)                      0 -> 2

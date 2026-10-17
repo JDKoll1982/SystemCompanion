@@ -1,0 +1,10 @@
+{
+  "workflow": "speckit",
+  "specName": "001-system-companion",
+  "branch": "001-system-companion",
+  "selectedAt": "2026-10-17T18:33:10.302Z",
+  "currentStep": "specify",
+  "status": "draft",
+  "history": [],
+  "telemetryInstanceId": "43c61ba1-84aa-46c0-92ce-b3dbedf251e6"
+}

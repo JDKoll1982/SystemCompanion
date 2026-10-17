@@ -1,0 +1,14 @@
+{
+  "_comment": [
+    "MSI Click BIOS 5 relabels a few settings in its own UI layer, so the label on",
+    "screen differs from the HII/IFR prompt stored in the firmware. Only entries",
+    "confirmed against bios_images/ screenshots AND the profile bytes are listed.",
+    "key = varstore, value = { '<decimal varoffset>': '<UI label>' }"
+  ],
+  "Setup": {
+    "3934": "CPU Over Temp. Protection"
+  },
+  "UsbSupport": {
+    "43": "XHCI Hand-off"
+  }
+}
